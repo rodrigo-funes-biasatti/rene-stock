@@ -1,0 +1,10 @@
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.exe.config
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.exe
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.pdb
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.frmMain.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Properties.Resources.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csproj.GenerateResource.cache
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.exe
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.pdb
