@@ -18,9 +18,6 @@ namespace Prueba_Rene
         public frmMain()
         {
             InitializeComponent();
-
-            
-            
         }
 
         private void clock1_Tick(object sender, EventArgs e)
@@ -68,6 +65,25 @@ namespace Prueba_Rene
             t.Tick += new EventHandler(this.clock1_Tick);
 
             t.Start();
+
+            habilitarPanelesConfig(false);
+        }
+
+        private void habilitarPanelesConfig(bool op)
+        {
+            this.panelConfig.Visible = op;
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            if (panelConfig.Visible)
+            {
+                habilitarPanelesConfig(false);
+            }
+            else
+            {
+                habilitarPanelesConfig(true);
+            }
         }
     }
 }

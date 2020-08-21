@@ -1154,6 +1154,74 @@
 							"headNameLabel": {
 								"$ref": "AAAAAAF0BHmen/WbGVM="
 							}
+						},
+						{
+							"_type": "ERDEntityView",
+							"_id": "AAAAAAF0CXO7LEJKooU=",
+							"_parent": {
+								"$ref": "AAAAAAF0A/iNbPKZxYU="
+							},
+							"model": {
+								"$ref": "AAAAAAF0CXO7K0JIs/0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF0CXO7LEJLaf0=",
+									"_parent": {
+										"$ref": "AAAAAAF0CXO7LEJKooU="
+									},
+									"font": "Arial;13;1",
+									"left": 88,
+									"top": 221,
+									"width": 180.2744140625,
+									"height": 13,
+									"text": "Contraseñas"
+								},
+								{
+									"_type": "ERDColumnCompartmentView",
+									"_id": "AAAAAAF0CXO7LEJMuYI=",
+									"_parent": {
+										"$ref": "AAAAAAF0CXO7LEJKooU="
+									},
+									"model": {
+										"$ref": "AAAAAAF0CXO7K0JIs/0="
+									},
+									"subViews": [
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAF0CXPIokJYC+k=",
+											"_parent": {
+												"$ref": "AAAAAAF0CXO7LEJMuYI="
+											},
+											"model": {
+												"$ref": "AAAAAAF0CXPIbkJVpKs="
+											},
+											"font": "Arial;13;0",
+											"left": 93,
+											"top": 244,
+											"width": 170.2744140625,
+											"height": 13
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 88,
+									"top": 239,
+									"width": 180.2744140625,
+									"height": 23
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 88,
+							"top": 216,
+							"width": 180.2744140625,
+							"height": 46,
+							"nameLabel": {
+								"$ref": "AAAAAAF0CXO7LEJLaf0="
+							},
+							"columnCompartment": {
+								"$ref": "AAAAAAF0CXO7LEJMuYI="
+							}
 						}
 					]
 				},
@@ -1725,6 +1793,26 @@
 							"type": "string",
 							"length": 0,
 							"nullable": true
+						}
+					]
+				},
+				{
+					"_type": "ERDEntity",
+					"_id": "AAAAAAF0CXO7K0JIs/0=",
+					"_parent": {
+						"$ref": "AAAAAAF0A/iNbPKYsrk="
+					},
+					"name": "Contraseñas",
+					"columns": [
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAF0CXPIbkJVpKs=",
+							"_parent": {
+								"$ref": "AAAAAAF0CXO7K0JIs/0="
+							},
+							"name": "contraseña_actual",
+							"type": "string",
+							"length": 0
 						}
 					]
 				}

@@ -1,0 +1,70 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `Producto`;
+DROP TABLE IF EXISTS `Remito`;
+DROP TABLE IF EXISTS `Condicion_Venta`;
+DROP TABLE IF EXISTS `Item_Remito`;
+DROP TABLE IF EXISTS `Stock`;
+DROP TABLE IF EXISTS `Rubro`;
+DROP TABLE IF EXISTS `Contrasenas`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE `Producto` (
+    `id_prod` int NOT NULL,
+    `tipo_prod` varchar(100),
+    `marca` varchar(100),
+    `precio_unitario` double,
+    `descripcion` varchar(300),
+    `id_rubro` int NOT NULL,
+    PRIMARY KEY (`id_prod`)
+);
+
+CREATE TABLE `Remito` (
+    `codigo_rem` int NOT NULL,
+    `fecha_remito` datetime,
+    `id_condicion_venta` int NOT NULL,
+    `cod_barra` int,
+    `observaciones` varchar(300),
+    `total_remito` double,
+    `dueño` varchar(100),
+    PRIMARY KEY (`codigo_rem`)
+);
+
+CREATE TABLE `Condicion_Venta` (
+    `id_condicion_venta` int NOT NULL,
+    `descripcion` varchar(300),
+    PRIMARY KEY (`id_condicion_venta`)
+);
+
+CREATE TABLE `Item_Remito` (
+    `codigo_rem` int NOT NULL,
+    `id_prod` int NOT NULL,
+    `cantidad` double,
+    `precio_unitario` double,
+    `subtotal` double,
+    `descripcion` varchar(300),
+    PRIMARY KEY (`codigo_rem`, `id_prod`)
+);
+
+CREATE TABLE `Stock` (
+    `id_prod` int NOT NULL,
+    `ult_fecha_modif` datetime,
+    `cantidad_actual` double,
+    PRIMARY KEY (`id_prod`)
+);
+
+CREATE TABLE `Rubro` (
+    `id_rubro` int NOT NULL,
+    `nombre` varchar(100),
+    `descripcion` varchar(100),
+    PRIMARY KEY (`id_rubro`)
+);
+
+CREATE TABLE `Contrasenas` (
+    `contrasena_actual` varchar(50) NOT NULL
+);
+
+ALTER TABLE `Producto` ADD FOREIGN KEY (`id_rubro`) REFERENCES `Rubro`(`id_rubro`);
+ALTER TABLE `Remito` ADD FOREIGN KEY (`id_condicion_venta`) REFERENCES `Condicion_Venta`(`id_condicion_venta`);
+ALTER TABLE `Item_Remito` ADD FOREIGN KEY (`id_prod`) REFERENCES `Producto`(`id_prod`);
+ALTER TABLE `Item_Remito` ADD FOREIGN KEY (`codigo_rem`) REFERENCES `Remito`(`codigo_rem`);
+ALTER TABLE `Stock` ADD FOREIGN KEY (`id_prod`) REFERENCES `Producto`(`id_prod`);
