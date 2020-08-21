@@ -34,12 +34,12 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnRene = new System.Windows.Forms.Button();
-            this.btnConfig = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelConfig = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnAgustin = new System.Windows.Forms.Button();
             this.bntStock = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelConfig.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,57 +94,32 @@
             this.btnRene.Text = "Rene";
             this.btnRene.UseVisualStyleBackColor = false;
             // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.Color.Firebrick;
-            this.btnConfig.BackgroundImage = global::Prueba_Rene.Properties.Resources.cog_solid_white;
-            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Location = new System.Drawing.Point(12, 712);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(287, 58);
-            this.btnConfig.TabIndex = 6;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackgroundImage = global::Prueba_Rene.Properties.Resources.loco;
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogo.Location = new System.Drawing.Point(12, 186);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(271, 231);
-            this.panelLogo.TabIndex = 5;
-            // 
             // panelConfig
             // 
-            this.panelConfig.Controls.Add(this.button1);
+            this.panelConfig.BackColor = System.Drawing.Color.Brown;
+            this.panelConfig.Controls.Add(this.btnCambiarContraseña);
             this.panelConfig.Location = new System.Drawing.Point(305, 712);
             this.panelConfig.Name = "panelConfig";
-            this.panelConfig.Size = new System.Drawing.Size(693, 58);
+            this.panelConfig.Size = new System.Drawing.Size(691, 58);
             this.panelConfig.TabIndex = 7;
             // 
-            // button1
+            // btnCambiarContraseña
             // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(287, 58);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cambiar Contraseña";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCambiarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 0);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(287, 58);
+            this.btnCambiarContraseña.TabIndex = 8;
+            this.btnCambiarContraseña.Text = "Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // btnAgustin
             // 
@@ -179,6 +154,33 @@
             this.bntStock.TabIndex = 8;
             this.bntStock.Text = "Consultar Stock";
             this.bntStock.UseVisualStyleBackColor = false;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.Firebrick;
+            this.btnConfig.BackgroundImage = global::Prueba_Rene.Properties.Resources.cog_solid_white;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Location = new System.Drawing.Point(12, 712);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(287, 58);
+            this.btnConfig.TabIndex = 6;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackgroundImage = global::Prueba_Rene.Properties.Resources.loco;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogo.Location = new System.Drawing.Point(12, 186);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(271, 231);
+            this.panelLogo.TabIndex = 5;
             // 
             // frmMain
             // 
@@ -217,7 +219,7 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Panel panelConfig;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCambiarContraseña;
         private System.Windows.Forms.Button btnAgustin;
         private System.Windows.Forms.Button bntStock;
     }

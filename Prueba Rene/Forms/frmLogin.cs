@@ -50,7 +50,7 @@ namespace Prueba_Rene.Forms
             }
             else
             {
-                MessageBox.Show("Contraseña incorrecta");
+                MessageBox.Show("Contraseña Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

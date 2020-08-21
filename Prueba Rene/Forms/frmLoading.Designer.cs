@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
+            this.lblEstamos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,17 +40,28 @@
             this.pictureBoxLoading.ImageLocation = "";
             this.pictureBoxLoading.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLoading.Name = "pictureBoxLoading";
-            this.pictureBoxLoading.Size = new System.Drawing.Size(136, 136);
+            this.pictureBoxLoading.Size = new System.Drawing.Size(154, 154);
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLoading.TabIndex = 0;
             this.pictureBoxLoading.TabStop = false;
+            // 
+            // lblEstamos
+            // 
+            this.lblEstamos.AutoSize = true;
+            this.lblEstamos.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblEstamos.Location = new System.Drawing.Point(24, 132);
+            this.lblEstamos.Name = "lblEstamos";
+            this.lblEstamos.Size = new System.Drawing.Size(109, 13);
+            this.lblEstamos.TabIndex = 1;
+            this.lblEstamos.Text = "Estamos trabajando...";
             // 
             // frmLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(136, 136);
+            this.ClientSize = new System.Drawing.Size(154, 154);
+            this.Controls.Add(this.lblEstamos);
             this.Controls.Add(this.pictureBoxLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoading";
@@ -57,11 +69,13 @@
             this.Text = "frmLoading";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxLoading;
+        private System.Windows.Forms.Label lblEstamos;
     }
 }

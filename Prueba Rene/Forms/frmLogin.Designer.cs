@@ -62,7 +62,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(0, 187);
+            this.btnIngresar.Location = new System.Drawing.Point(0, 164);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(416, 37);
             this.btnIngresar.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(416, 233);
+            this.ClientSize = new System.Drawing.Size(416, 207);
             this.Controls.Add(this.panelLogo);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContraseña);

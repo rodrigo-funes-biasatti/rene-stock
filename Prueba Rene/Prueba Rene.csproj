@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\accesoDatos.cs" />
+    <Compile Include="Forms\ABM\frmABMContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\frmABMContraseña.Designer.cs">
+      <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ABM\frmABMContraseña.resx">
+      <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>

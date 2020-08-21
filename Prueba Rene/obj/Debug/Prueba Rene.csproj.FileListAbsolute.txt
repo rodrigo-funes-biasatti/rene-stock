@@ -25,3 +25,4 @@ D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\MySql.Da
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.exe.config
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csproj.CopyComplete
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.frmLoading.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.ABM.frmABMContraseña.resources

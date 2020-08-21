@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba_Rene.Forms.ABM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace Prueba_Rene
         public frmMain()
         {
             InitializeComponent();
+            panelContent.Controls.Clear();
         }
 
         private void clock1_Tick(object sender, EventArgs e)
@@ -84,6 +86,16 @@ namespace Prueba_Rene
             {
                 habilitarPanelesConfig(true);
             }
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            frmABMContraseña form = new frmABMContraseña();
+            form.TopLevel = false;
+
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(form);
+            form.Show();
         }
     }
 }
