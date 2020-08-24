@@ -47,11 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Rubro.cs" />
     <Compile Include="Datos\accesoDatos.cs" />
-    <Compile Include="Forms\ABM\frmABMContraseña.cs">
+    <Compile Include="Forms\Contraseñas\frmABMContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ABM\frmABMContraseña.Designer.cs">
+    <Compile Include="Forms\Contraseñas\frmABMContraseña.Designer.cs">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLoading.cs">
@@ -60,31 +62,49 @@
     <Compile Include="Forms\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMain.cs">
+    <Compile Include="Forms\Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.cs">
+    <Compile Include="Forms\Main\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Program.cs" />
-    <Compile Include="Forms\frmLogin.cs">
+    <Compile Include="Forms\Main\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
+    <Compile Include="Forms\Main\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Productos\frmABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmABMProductos.Designer.cs">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmListaProductos.Designer.cs">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ABM\frmABMContraseña.resx">
+    <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
+    <EmbeddedResource Include="Forms\Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
+    <EmbeddedResource Include="Forms\Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmABMProductos.resx">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,9 +131,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\long-arrow-alt-left-solid.png" />
+    <None Include="Resources\trash-alt-regular.png" />
+    <None Include="Resources\plus-square-regular.png" />
     <None Include="Resources\cog-solid_white.png" />
     <None Include="Resources\cog-solid.png" />
     <None Include="Resources\Gear-0.2s-200px.gif" />
+    <None Include="Resources\edit-regular.png" />
+    <None Include="Resources\list-alt-regular.png" />
     <Content Include="Resources\loco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

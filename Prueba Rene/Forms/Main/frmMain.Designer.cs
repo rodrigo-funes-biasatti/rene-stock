@@ -36,11 +36,11 @@
             this.btnRemito = new System.Windows.Forms.Button();
             this.panelConfig = new System.Windows.Forms.Panel();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.btnAgustin = new System.Windows.Forms.Button();
-            this.bntStock = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnLimpiarPanel = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnLimpiarPanel = new System.Windows.Forms.Button();
             this.panelConfig.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,8 +91,9 @@
             this.btnRemito.Location = new System.Drawing.Point(12, 520);
             this.btnRemito.Name = "btnRemito";
             this.btnRemito.Size = new System.Drawing.Size(287, 58);
-            this.btnRemito.TabIndex = 3;
+            this.btnRemito.TabIndex = 1;
             this.btnRemito.Text = "Remitos";
+            this.btnRemito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemito.UseVisualStyleBackColor = false;
             // 
             // panelConfig
@@ -117,44 +118,67 @@
             this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 0);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(287, 58);
-            this.btnCambiarContraseña.TabIndex = 8;
+            this.btnCambiarContraseña.TabIndex = 5;
             this.btnCambiarContraseña.Text = "Cambiar Contraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
             this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
-            // btnAgustin
+            // btnProductos
             // 
-            this.btnAgustin.BackColor = System.Drawing.Color.Firebrick;
-            this.btnAgustin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAgustin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgustin.FlatAppearance.BorderSize = 0;
-            this.btnAgustin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgustin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgustin.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgustin.ForeColor = System.Drawing.Color.White;
-            this.btnAgustin.Location = new System.Drawing.Point(12, 584);
-            this.btnAgustin.Name = "btnAgustin";
-            this.btnAgustin.Size = new System.Drawing.Size(287, 58);
-            this.btnAgustin.TabIndex = 4;
-            this.btnAgustin.Text = "Productos";
-            this.btnAgustin.UseVisualStyleBackColor = false;
+            this.btnProductos.BackColor = System.Drawing.Color.Firebrick;
+            this.btnProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Location = new System.Drawing.Point(12, 584);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(287, 58);
+            this.btnProductos.TabIndex = 2;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // bntStock
+            // btnStock
             // 
-            this.bntStock.BackColor = System.Drawing.Color.Firebrick;
-            this.bntStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bntStock.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.bntStock.FlatAppearance.BorderSize = 0;
-            this.bntStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bntStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntStock.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntStock.ForeColor = System.Drawing.Color.White;
-            this.bntStock.Location = new System.Drawing.Point(12, 648);
-            this.bntStock.Name = "bntStock";
-            this.bntStock.Size = new System.Drawing.Size(287, 58);
-            this.bntStock.TabIndex = 8;
-            this.bntStock.Text = "Stock";
-            this.bntStock.UseVisualStyleBackColor = false;
+            this.btnStock.BackColor = System.Drawing.Color.Firebrick;
+            this.btnStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStock.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.Location = new System.Drawing.Point(12, 648);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(287, 58);
+            this.btnStock.TabIndex = 3;
+            this.btnStock.Text = "Stock";
+            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpiarPanel
+            // 
+            this.btnLimpiarPanel.BackColor = System.Drawing.Color.Firebrick;
+            this.btnLimpiarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLimpiarPanel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLimpiarPanel.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarPanel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPanel.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarPanel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarPanel.Location = new System.Drawing.Point(12, 456);
+            this.btnLimpiarPanel.Name = "btnLimpiarPanel";
+            this.btnLimpiarPanel.Size = new System.Drawing.Size(287, 58);
+            this.btnLimpiarPanel.TabIndex = 0;
+            this.btnLimpiarPanel.Text = "Limpiar Panel";
+            this.btnLimpiarPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiarPanel.UseVisualStyleBackColor = false;
+            this.btnLimpiarPanel.Click += new System.EventHandler(this.btnLimpiarPanel_Click);
             // 
             // btnConfig
             // 
@@ -171,7 +195,7 @@
             this.btnConfig.Location = new System.Drawing.Point(12, 712);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(287, 58);
-            this.btnConfig.TabIndex = 6;
+            this.btnConfig.TabIndex = 4;
             this.btnConfig.UseVisualStyleBackColor = false;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
@@ -179,28 +203,10 @@
             // 
             this.panelLogo.BackgroundImage = global::Prueba_Rene.Properties.Resources.loco;
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogo.Location = new System.Drawing.Point(12, 129);
+            this.panelLogo.Location = new System.Drawing.Point(12, 162);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(271, 231);
             this.panelLogo.TabIndex = 5;
-            // 
-            // btnLimpiarPanel
-            // 
-            this.btnLimpiarPanel.BackColor = System.Drawing.Color.Firebrick;
-            this.btnLimpiarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLimpiarPanel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLimpiarPanel.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLimpiarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarPanel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarPanel.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarPanel.Location = new System.Drawing.Point(12, 456);
-            this.btnLimpiarPanel.Name = "btnLimpiarPanel";
-            this.btnLimpiarPanel.Size = new System.Drawing.Size(287, 58);
-            this.btnLimpiarPanel.TabIndex = 9;
-            this.btnLimpiarPanel.Text = "Limpiar Panel";
-            this.btnLimpiarPanel.UseVisualStyleBackColor = false;
-            this.btnLimpiarPanel.Click += new System.EventHandler(this.btnLimpiarPanel_Click);
             // 
             // frmMain
             // 
@@ -208,11 +214,11 @@
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1008, 776);
             this.Controls.Add(this.btnLimpiarPanel);
-            this.Controls.Add(this.bntStock);
+            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.panelConfig);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.panelLogo);
-            this.Controls.Add(this.btnAgustin);
+            this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnRemito);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
@@ -233,7 +239,6 @@
         #endregion
 
         private System.Windows.Forms.Timer clock1;
-        private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnRemito;
@@ -241,9 +246,10 @@
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Panel panelConfig;
         private System.Windows.Forms.Button btnCambiarContraseña;
-        private System.Windows.Forms.Button btnAgustin;
-        private System.Windows.Forms.Button bntStock;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnLimpiarPanel;
+        public System.Windows.Forms.Panel panelContent;
     }
 }
 

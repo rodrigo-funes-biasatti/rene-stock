@@ -83,6 +83,16 @@ namespace Prueba_Rene.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_regular {
+            get {
+                object obj = ResourceManager.GetObject("edit-regular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gear_0_2s_200px {
             get {
                 object obj = ResourceManager.GetObject("Gear-0.2s-200px", resourceCulture);
@@ -93,9 +103,59 @@ namespace Prueba_Rene.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_alt_regular {
+            get {
+                object obj = ResourceManager.GetObject("list-alt-regular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loco {
             get {
                 object obj = ResourceManager.GetObject("loco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap long_arrow_alt_left_solid {
+            get {
+                object obj = ResourceManager.GetObject("long-arrow-alt-left-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_square_regular {
+            get {
+                object obj = ResourceManager.GetObject("plus-square-regular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_square_regular1 {
+            get {
+                object obj = ResourceManager.GetObject("plus-square-regular1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_alt_regular {
+            get {
+                object obj = ResourceManager.GetObject("trash-alt-regular", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

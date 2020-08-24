@@ -1,4 +1,5 @@
 ﻿using Prueba_Rene.Forms.ABM;
+using Prueba_Rene.Forms.Productos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace Prueba_Rene
 {
     public partial class frmMain : Form
     {
+
+        //List<Form> secuencia_panel;
+        frmABMProductos abmprod;
 
         Timer t = new Timer();
 
@@ -94,7 +98,6 @@ namespace Prueba_Rene
             form.TopLevel = false;
 
             limpiarPanelPrincipal();
-            panelContent.Controls.Add(form);
             form.Show();
         }
 
@@ -103,9 +106,30 @@ namespace Prueba_Rene
             limpiarPanelPrincipal();
         }
 
-        private void limpiarPanelPrincipal()
+        public void limpiarPanelPrincipal()
         {
             panelContent.Controls.Clear();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            foreach(Form f in Application.OpenForms)
+            {
+                if (f.Name.Equals("frmABMProductos"))
+                {
+                    return;
+                }
+            }
+
+            abmprod = new frmABMProductos(panelContent, this);
+
+            limpiarPanelPrincipal();
+      
+            abmprod.TopLevel = false;
+            
+
+            panelContent.Controls.Add(abmprod);
+            abmprod.Show();
         }
     }
 }

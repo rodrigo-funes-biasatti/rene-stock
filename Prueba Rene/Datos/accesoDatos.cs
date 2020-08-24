@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Prueba_Rene.Clases;
 
 namespace Prueba_Rene.Datos
 {
@@ -106,6 +107,48 @@ namespace Prueba_Rene.Datos
                     }
                 }
             }
+        }
+
+        public List<Rubro> obtenerRubros()
+        {
+            List<Rubro> rubros = new List<Rubro>();
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                string query = "SELECT * FROM Rubros";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    var reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Rubro r = new Rubro();
+                        r.Id_rubro = Convert.ToInt32(reader["id_rubro"]);
+                        r.Nombre = Convert.ToString(reader["nombre"]);
+                        r.Descripcion = Convert.ToString(reader["descripcion"]);
+
+                        rubros.Add(r);
+                    }
+                }
+
+                return rubros;
+            }
+        }
+
+        public DataTable rellenarGrillaProductos()
+        {
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                string query = "SELECT * FROM Productos";
+                using (var da = new MySqlDataAdapter(query, con))
+                {
+                    da.Fill(ret);
+                }
+            }
+
+            return ret;
         }
     }
 }
