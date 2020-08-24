@@ -68,6 +68,7 @@
             this.bntNuevaContraseña.TabIndex = 2;
             this.bntNuevaContraseña.Text = "Cambiar";
             this.bntNuevaContraseña.UseVisualStyleBackColor = false;
+            this.bntNuevaContraseña.Click += new System.EventHandler(this.bntNuevaContraseña_Click);
             // 
             // txtAnteriorContraseña
             // 

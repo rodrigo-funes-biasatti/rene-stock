@@ -93,9 +93,19 @@ namespace Prueba_Rene
             frmABMContraseña form = new frmABMContraseña();
             form.TopLevel = false;
 
-            panelContent.Controls.Clear();
+            limpiarPanelPrincipal();
             panelContent.Controls.Add(form);
             form.Show();
+        }
+
+        private void btnLimpiarPanel_Click(object sender, EventArgs e)
+        {
+            limpiarPanelPrincipal();
+        }
+
+        private void limpiarPanelPrincipal()
+        {
+            panelContent.Controls.Clear();
         }
     }
 }

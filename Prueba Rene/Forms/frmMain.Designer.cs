@@ -33,13 +33,14 @@
             this.panelContent = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.btnRene = new System.Windows.Forms.Button();
+            this.btnRemito = new System.Windows.Forms.Button();
             this.panelConfig = new System.Windows.Forms.Panel();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnAgustin = new System.Windows.Forms.Button();
             this.bntStock = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnLimpiarPanel = new System.Windows.Forms.Button();
             this.panelConfig.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,22 +78,22 @@
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "xx xxxx";
             // 
-            // btnRene
+            // btnRemito
             // 
-            this.btnRene.BackColor = System.Drawing.Color.Firebrick;
-            this.btnRene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRene.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRene.FlatAppearance.BorderSize = 0;
-            this.btnRene.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRene.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRene.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRene.ForeColor = System.Drawing.Color.White;
-            this.btnRene.Location = new System.Drawing.Point(12, 520);
-            this.btnRene.Name = "btnRene";
-            this.btnRene.Size = new System.Drawing.Size(287, 58);
-            this.btnRene.TabIndex = 3;
-            this.btnRene.Text = "Rene";
-            this.btnRene.UseVisualStyleBackColor = false;
+            this.btnRemito.BackColor = System.Drawing.Color.Firebrick;
+            this.btnRemito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRemito.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRemito.FlatAppearance.BorderSize = 0;
+            this.btnRemito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRemito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemito.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemito.ForeColor = System.Drawing.Color.White;
+            this.btnRemito.Location = new System.Drawing.Point(12, 520);
+            this.btnRemito.Name = "btnRemito";
+            this.btnRemito.Size = new System.Drawing.Size(287, 58);
+            this.btnRemito.TabIndex = 3;
+            this.btnRemito.Text = "Remitos";
+            this.btnRemito.UseVisualStyleBackColor = false;
             // 
             // panelConfig
             // 
@@ -135,7 +136,7 @@
             this.btnAgustin.Name = "btnAgustin";
             this.btnAgustin.Size = new System.Drawing.Size(287, 58);
             this.btnAgustin.TabIndex = 4;
-            this.btnAgustin.Text = "Agustin";
+            this.btnAgustin.Text = "Productos";
             this.btnAgustin.UseVisualStyleBackColor = false;
             // 
             // bntStock
@@ -152,7 +153,7 @@
             this.bntStock.Name = "bntStock";
             this.bntStock.Size = new System.Drawing.Size(287, 58);
             this.bntStock.TabIndex = 8;
-            this.bntStock.Text = "Consultar Stock";
+            this.bntStock.Text = "Stock";
             this.bntStock.UseVisualStyleBackColor = false;
             // 
             // btnConfig
@@ -166,6 +167,7 @@
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfig.Location = new System.Drawing.Point(12, 712);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(287, 58);
@@ -177,22 +179,41 @@
             // 
             this.panelLogo.BackgroundImage = global::Prueba_Rene.Properties.Resources.loco;
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogo.Location = new System.Drawing.Point(12, 186);
+            this.panelLogo.Location = new System.Drawing.Point(12, 129);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(271, 231);
             this.panelLogo.TabIndex = 5;
+            // 
+            // btnLimpiarPanel
+            // 
+            this.btnLimpiarPanel.BackColor = System.Drawing.Color.Firebrick;
+            this.btnLimpiarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLimpiarPanel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLimpiarPanel.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarPanel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPanel.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarPanel.Location = new System.Drawing.Point(12, 456);
+            this.btnLimpiarPanel.Name = "btnLimpiarPanel";
+            this.btnLimpiarPanel.Size = new System.Drawing.Size(287, 58);
+            this.btnLimpiarPanel.TabIndex = 9;
+            this.btnLimpiarPanel.Text = "Limpiar Panel";
+            this.btnLimpiarPanel.UseVisualStyleBackColor = false;
+            this.btnLimpiarPanel.Click += new System.EventHandler(this.btnLimpiarPanel_Click);
             // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1008, 776);
+            this.Controls.Add(this.btnLimpiarPanel);
             this.Controls.Add(this.bntStock);
             this.Controls.Add(this.panelConfig);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.panelLogo);
             this.Controls.Add(this.btnAgustin);
-            this.Controls.Add(this.btnRene);
+            this.Controls.Add(this.btnRemito);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panelContent);
@@ -215,13 +236,14 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Button btnRene;
+        private System.Windows.Forms.Button btnRemito;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Panel panelConfig;
         private System.Windows.Forms.Button btnCambiarContraseña;
         private System.Windows.Forms.Button btnAgustin;
         private System.Windows.Forms.Button bntStock;
+        private System.Windows.Forms.Button btnLimpiarPanel;
     }
 }
 
