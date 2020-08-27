@@ -87,6 +87,12 @@
     <Compile Include="Forms\Productos\frmListaProductos.Designer.cs">
       <DependentUpon>frmListaProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Rubros\frmRubros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rubros\frmRubros.Designer.cs">
+      <DependentUpon>frmRubros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Productos\frmListaProductos.resx">
       <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rubros\frmRubros.resx">
+      <DependentUpon>frmRubros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +148,7 @@
     <None Include="Resources\Gear-0.2s-200px.gif" />
     <None Include="Resources\edit-regular.png" />
     <None Include="Resources\list-alt-regular.png" />
+    <None Include="Resources\layer-group-solid.png" />
     <Content Include="Resources\loco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -49,7 +49,10 @@ namespace Prueba_Rene.Forms.Productos
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
+            panel_principal.Controls.Add(frmAnterior);
+            frmAnterior.Show();
+            GC.Collect();
         }
 
         public void cambiarRubros()
@@ -64,7 +67,12 @@ namespace Prueba_Rene.Forms.Productos
                     if (r.Id_rubro.Equals(fila.Cells["id_rubro"].Value))
                     {
                         fila.Cells["rubro_name"].Value = r.Nombre;
+                        continue;
                     }
+                }
+                if (fila.Cells["rubro_name"].Value == null)
+                {
+                    fila.Cells["rubro_name"].Value = "-Sin Rubro-";
                 }
             }
             dataGridViewProductos.Columns["id_rubro"].Visible = false;

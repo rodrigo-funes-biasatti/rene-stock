@@ -150,5 +150,26 @@ namespace Prueba_Rene.Datos
 
             return ret;
         }
+
+        public bool borrarRubro(Rubro r)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                string query = "DELETE FROM Rubros WHERE id_rubro = " + r.Id_rubro.ToString();
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
     }
 }

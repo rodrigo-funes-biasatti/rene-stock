@@ -94,10 +94,11 @@ namespace Prueba_Rene
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
+            limpiarPanelPrincipal();
             frmABMContraseña form = new frmABMContraseña();
             form.TopLevel = false;
 
-            limpiarPanelPrincipal();
+            panelContent.Controls.Add(form);
             form.Show();
         }
 
@@ -108,26 +109,27 @@ namespace Prueba_Rene
 
         public void limpiarPanelPrincipal()
         {
+            FormCollection forms = Application.OpenForms;
             panelContent.Controls.Clear();
+            for (int i = 0; i < forms.Count; i++)
+            {
+                Form f = forms[i];
+                if (f.Name.Equals("frmABMProductos") || f.Name.Equals("frmListaProductos"))
+                {
+                    f.Dispose();
+                }
+            }
+            GC.Collect();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            foreach(Form f in Application.OpenForms)
-            {
-                if (f.Name.Equals("frmABMProductos"))
-                {
-                    return;
-                }
-            }
-
-            abmprod = new frmABMProductos(panelContent, this);
 
             limpiarPanelPrincipal();
-      
+
+            abmprod = new frmABMProductos(panelContent, this);
             abmprod.TopLevel = false;
             
-
             panelContent.Controls.Add(abmprod);
             abmprod.Show();
         }

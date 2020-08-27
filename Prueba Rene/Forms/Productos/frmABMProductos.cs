@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba_Rene.Forms.Rubros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,8 +29,9 @@ namespace Prueba_Rene.Forms.Productos
 
         private void panelListaProductos_Click(object sender, EventArgs e)
         {
+            panel_principal.Controls.Clear();
+
             frmListaProductos listadoProductos = new frmListaProductos(panel_principal, this);
-            principal.limpiarPanelPrincipal();
             listadoProductos.TopLevel = false;
 
             panel_principal.Controls.Add(listadoProductos);
@@ -53,6 +55,17 @@ namespace Prueba_Rene.Forms.Productos
 
             panel_principal.Controls.Add(listadoProductos);
             listadoProductos.Show();
+        }
+
+        private void panelRubros_Click(object sender, EventArgs e)
+        {
+            panel_principal.Controls.Clear();
+
+            frmRubros frm_rubros = new frmRubros(panel_principal, this);
+            frm_rubros.TopLevel = false;
+
+            panel_principal.Controls.Add(frm_rubros);
+            frm_rubros.Show();
         }
     }
 }
