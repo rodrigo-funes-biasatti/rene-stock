@@ -33,15 +33,18 @@
             this.labelDivider = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewRubros = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.id_rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorkerCargarTabla = new System.ComponentModel.BackgroundWorker();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreNuevo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDescripcionNuevo = new System.Windows.Forms.TextBox();
             this.bntAgregarNuevo = new System.Windows.Forms.Button();
+            this.txtDescripcionNuevo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNombreNuevo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -51,9 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.id_rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRubros)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,6 +116,37 @@
             this.dataGridViewRubros.TabIndex = 3;
             this.dataGridViewRubros.SelectionChanged += new System.EventHandler(this.dataGridViewRubros_SelectionChanged);
             // 
+            // id_rubro
+            // 
+            this.id_rubro.DataPropertyName = "id_rubro";
+            this.id_rubro.FillWeight = 41.26412F;
+            this.id_rubro.HeaderText = "ID Rubro";
+            this.id_rubro.Name = "id_rubro";
+            this.id_rubro.ReadOnly = true;
+            this.id_rubro.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 76.14214F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.FillWeight = 182.5938F;
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            this.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // backgroundWorkerCargarTabla
+            // 
+            this.backgroundWorkerCargarTabla.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerCargarTabla_DoWork);
+            this.backgroundWorkerCargarTabla.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerCargarTabla_RunWorkerCompleted);
+            // 
             // btnBorrar
             // 
             this.btnBorrar.BackColor = System.Drawing.Color.Firebrick;
@@ -155,44 +186,6 @@
             this.panel1.Size = new System.Drawing.Size(667, 106);
             this.panel1.TabIndex = 6;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 26);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Nombre: ";
-            // 
-            // txtNombreNuevo
-            // 
-            this.txtNombreNuevo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreNuevo.Location = new System.Drawing.Point(152, 3);
-            this.txtNombreNuevo.Name = "txtNombreNuevo";
-            this.txtNombreNuevo.Size = new System.Drawing.Size(205, 34);
-            this.txtNombreNuevo.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 26);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Descripción: ";
-            // 
-            // txtDescripcionNuevo
-            // 
-            this.txtDescripcionNuevo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionNuevo.Location = new System.Drawing.Point(152, 69);
-            this.txtDescripcionNuevo.Name = "txtDescripcionNuevo";
-            this.txtDescripcionNuevo.Size = new System.Drawing.Size(326, 34);
-            this.txtDescripcionNuevo.TabIndex = 9;
-            // 
             // bntAgregarNuevo
             // 
             this.bntAgregarNuevo.BackColor = System.Drawing.Color.DarkRed;
@@ -207,6 +200,45 @@
             this.bntAgregarNuevo.TabIndex = 7;
             this.bntAgregarNuevo.Text = "Agregar";
             this.bntAgregarNuevo.UseVisualStyleBackColor = false;
+            this.bntAgregarNuevo.Click += new System.EventHandler(this.bntAgregarNuevo_Click);
+            // 
+            // txtDescripcionNuevo
+            // 
+            this.txtDescripcionNuevo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionNuevo.Location = new System.Drawing.Point(152, 69);
+            this.txtDescripcionNuevo.Name = "txtDescripcionNuevo";
+            this.txtDescripcionNuevo.Size = new System.Drawing.Size(326, 34);
+            this.txtDescripcionNuevo.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 26);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Descripción: ";
+            // 
+            // txtNombreNuevo
+            // 
+            this.txtNombreNuevo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreNuevo.Location = new System.Drawing.Point(152, 3);
+            this.txtNombreNuevo.Name = "txtNombreNuevo";
+            this.txtNombreNuevo.Size = new System.Drawing.Size(205, 34);
+            this.txtNombreNuevo.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 26);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Nombre: ";
             // 
             // label5
             // 
@@ -243,6 +275,7 @@
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtDescripcionEditar
             // 
@@ -304,32 +337,6 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
-            // id_rubro
-            // 
-            this.id_rubro.DataPropertyName = "id_rubro";
-            this.id_rubro.FillWeight = 41.26412F;
-            this.id_rubro.HeaderText = "ID Rubro";
-            this.id_rubro.Name = "id_rubro";
-            this.id_rubro.ReadOnly = true;
-            this.id_rubro.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.FillWeight = 76.14214F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.FillWeight = 182.5938F;
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // frmRubros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +373,7 @@
         private System.Windows.Forms.Label labelDivider;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewRubros;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerCargarTabla;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

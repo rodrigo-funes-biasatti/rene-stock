@@ -20,6 +20,9 @@ namespace Prueba_Rene.Forms.Rubros
         List<Rubro> rubros;
         accesoDatos ad;
         Rubro rubro_seleccionado;
+        DataTable tabla_rubros;
+        frmLoading loading;
+
         public frmRubros(Panel principal, Form anterior)
         {
             InitializeComponent();
@@ -27,11 +30,14 @@ namespace Prueba_Rene.Forms.Rubros
             panel_principal = principal;
             ad = new accesoDatos();
             rubro_seleccionado = new Rubro();
+            limpiarTxt();
         }
 
         private void frmRubros_Load(object sender, EventArgs e)
         {
-            cargarTabla();
+            loading = new frmLoading();
+            loading.Show();
+            backgroundWorkerCargarTabla.RunWorkerAsync();
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -42,11 +48,6 @@ namespace Prueba_Rene.Forms.Rubros
             GC.Collect();
         }
 
-        private DataTable cargarRubros()
-        {
-            DataTable tabla_rubros = ConvertToDataTable(rubros);
-            return tabla_rubros;
-        }
         public DataTable ConvertToDataTable<T>(IList<T> data)
         {
             PropertyDescriptorCollection properties =
@@ -67,7 +68,7 @@ namespace Prueba_Rene.Forms.Rubros
 
         private void dataGridViewRubros_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridViewRubros.CurrentCell.Equals(null))
+            if(dataGridViewRubros.CurrentCell == null)
             {
                 return;
             }
@@ -100,27 +101,29 @@ namespace Prueba_Rene.Forms.Rubros
             if (MessageBox.Show(message, "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Task<bool> tarea1 = new Task<bool>(borrarRubro);
-                Task tarea2 = new Task(cargarTabla);
-                frmLoading loading = new frmLoading();
 
+                loading = new frmLoading();
                 loading.Show();
                 tarea1.Start();
                 bool result = await tarea1;
-                tarea2.Start();
-                await tarea2;
-                loading.Close();
 
                 if (result)
                 {
                     MessageBox.Show("Se ha borrado el Rubro con éxito", "Borrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     rubro_seleccionado = new Rubro();
-                    return;
                 }
                 else
                 {
                     MessageBox.Show("Ha habido un problema al borrar el Rubro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    loading.Close();
+                    limpiarTxt();
                     return;
                 }
+
+                backgroundWorkerCargarTabla.RunWorkerAsync();
+                loading.Close();
+                limpiarTxt();
+
             }
             else
             {
@@ -133,27 +136,117 @@ namespace Prueba_Rene.Forms.Rubros
             return ad.borrarRubro(rubro_seleccionado);                       
         }
 
-        private async void cargarTabla()
+        private async void btnEditar_Click(object sender, EventArgs e)
         {
-            frmLoading loading = new frmLoading();
-            Task<DataTable> tarea1 = new Task<DataTable>(cargarRubros);
-            Task<List<Rubro>> tarea2 = new Task<List<Rubro>>(ad.obtenerRubros);
+            loading = new frmLoading();
 
+            if(txtNombreEditar.Text.Equals("") || txtDescripcionEditar.Text.Equals(""))
+            {
+                MessageBox.Show("Faltan datos a completar.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Task<bool> tarea1 = new Task<bool>(editarRubro);
+            
             loading.Show();
-
-            tarea2.Start();
-
-            rubros = await tarea2;
-
             tarea1.Start();
 
-            DataTable tabla_rubros = await tarea1;
+            bool ret = await tarea1;
 
+            if (!ret)
+            {
+                MessageBox.Show("Hubo un error al editar el Rubro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                limpiarTxt();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Se ha editado el Rubro con éxito.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            backgroundWorkerCargarTabla.RunWorkerAsync();
+
+            loading.Close();
+            limpiarTxt();
+        }
+
+        private bool editarRubro()
+        {
+            Rubro r = new Rubro()
+            {
+                Id_rubro = rubro_seleccionado.Id_rubro,
+                Nombre = txtNombreEditar.Text,
+                Descripcion = txtDescripcionEditar.Text
+            };
+
+            return ad.editarRubro(r);
+        }
+
+        private async void bntAgregarNuevo_Click(object sender, EventArgs e)
+        {
+            loading = new frmLoading();
+
+            if (txtNombreNuevo.Text.Equals("") || txtDescripcionNuevo.Text.Equals(""))
+            {
+                MessageBox.Show("Faltan datos a completar.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Task<bool> tareaAgregar = new Task<bool>(agregarRubro);
+
+            tareaAgregar.Start();
+            loading.Show();
+
+            bool ret = await tareaAgregar;          
+
+            if (ret)
+            {
+                MessageBox.Show("Se ha agregado el Rubro correctamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Hubo un problema al agregar el Rubro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                limpiarTxt();
+                return;
+            }
+
+            limpiarTxt();
+            backgroundWorkerCargarTabla.RunWorkerAsync();
+            loading.Close();
+        }
+
+        private bool agregarRubro()
+        {
+            Rubro r = new Rubro()
+            {
+                Nombre = txtNombreNuevo.Text,
+                Descripcion = txtDescripcionNuevo.Text
+            };
+
+            if (ad.agregarRubro(r))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void backgroundWorkerCargarTabla_DoWork(object sender, DoWorkEventArgs e)
+        {
+            rubros = ad.obtenerRubros();
+
+            tabla_rubros = ConvertToDataTable(rubros);
+
+        }
+
+        private void backgroundWorkerCargarTabla_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             dataGridViewRubros.DataSource = tabla_rubros;
+            dataGridViewRubros.Update();
             dataGridViewRubros.Refresh();
             dataGridViewRubros.CurrentCell = null;
-            limpiarTxt();
-
             loading.Close();
         }
     }

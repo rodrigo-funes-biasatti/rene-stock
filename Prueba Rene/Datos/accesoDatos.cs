@@ -26,6 +26,8 @@ namespace Prueba_Rene.Datos
                 {
                     int result = Convert.ToInt32(cmd.ExecuteScalar());
 
+                    con.Close();
+
                     if (result < 1)
                     {
                         return false;
@@ -53,6 +55,7 @@ namespace Prueba_Rene.Datos
                         }
                     }
                 }
+                con.Close();
             }
             return contraseña;
         }
@@ -83,6 +86,7 @@ namespace Prueba_Rene.Datos
                             return true;
                         }
                     }
+                    con.Close();
                 }
             }
         }
@@ -99,10 +103,12 @@ namespace Prueba_Rene.Datos
                 {
                     if (cmd.ExecuteNonQuery() < 1)
                     {
+                        con.Close();
                         return false;
                     }
                     else
                     {
+                        con.Close();
                         return true;
                     }
                 }
@@ -131,7 +137,7 @@ namespace Prueba_Rene.Datos
                         rubros.Add(r);
                     }
                 }
-
+                con.Close();
                 return rubros;
             }
         }
@@ -146,8 +152,8 @@ namespace Prueba_Rene.Datos
                 {
                     da.Fill(ret);
                 }
+                con.Close();
             }
-
             return ret;
         }
 
@@ -162,14 +168,66 @@ namespace Prueba_Rene.Datos
                     int result = cmd.ExecuteNonQuery();
                     if (result < 1)
                     {
+                        con.Close();
                         return false;
                     }
                     else
                     {
+                        con.Close();
                         return true;
                     }
                 }
             }
         }
+
+        public bool editarRubro(Rubro r)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "UPDATE Rubros SET nombre='" + r.Nombre + "', descripcion='" + r.Descripcion + "' WHERE id_rubro = " + r.Id_rubro.ToString();
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                    else
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }
+        }
+
+        public bool agregarRubro(Rubro r)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "INSERT INTO Rubros (nombre,descripcion) VALUES ('" + r.Nombre + "', '" + r.Descripcion + "')";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                    else
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }
+        }
+
+
     }
 }

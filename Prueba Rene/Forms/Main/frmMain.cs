@@ -23,7 +23,7 @@ namespace Prueba_Rene
         public frmMain()
         {
             InitializeComponent();
-            panelContent.Controls.Clear();
+            limpiarPanelPrincipal();
         }
 
         private void clock1_Tick(object sender, EventArgs e)
@@ -110,16 +110,14 @@ namespace Prueba_Rene
         public void limpiarPanelPrincipal()
         {
             FormCollection forms = Application.OpenForms;
-            panelContent.Controls.Clear();
-            for (int i = 0; i < forms.Count; i++)
+
+            foreach (IDisposable control in panelContent.Controls)
             {
-                Form f = forms[i];
-                if (f.Name.Equals("frmABMProductos") || f.Name.Equals("frmListaProductos"))
-                {
-                    f.Dispose();
-                }
+                control.Dispose();
             }
+
             GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
