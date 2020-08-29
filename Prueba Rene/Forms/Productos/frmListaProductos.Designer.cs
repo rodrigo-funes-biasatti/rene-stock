@@ -127,7 +127,7 @@
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.ReadOnly = true;
             this.dataGridViewProductos.Size = new System.Drawing.Size(667, 516);
-            this.dataGridViewProductos.TabIndex = 2;
+            this.dataGridViewProductos.TabIndex = 1;
             // 
             // id_prod
             // 

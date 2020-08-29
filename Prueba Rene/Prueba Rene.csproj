@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>loco.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -81,11 +84,29 @@
     <Compile Include="Forms\Productos\frmABMProductos.Designer.cs">
       <DependentUpon>frmABMProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Productos\frmEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEditarProducto.Designer.cs">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEliminarProducto.Designer.cs">
+      <DependentUpon>frmEliminarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Productos\frmListaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Productos\frmListaProductos.Designer.cs">
       <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmNuevoProducto.Designer.cs">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Rubros\frmRubros.cs">
       <SubType>Form</SubType>
@@ -109,8 +130,17 @@
     <EmbeddedResource Include="Forms\Productos\frmABMProductos.resx">
       <DependentUpon>frmABMProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmEditarProducto.resx">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmEliminarProducto.resx">
+      <DependentUpon>frmEliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Productos\frmListaProductos.resx">
       <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmNuevoProducto.resx">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Rubros\frmRubros.resx">
       <DependentUpon>frmRubros.cs</DependentUpon>
@@ -149,6 +179,7 @@
     <None Include="Resources\edit-regular.png" />
     <None Include="Resources\list-alt-regular.png" />
     <None Include="Resources\layer-group-solid.png" />
+    <Content Include="loco.ico" />
     <Content Include="Resources\loco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -30,29 +30,29 @@
         {
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEliminarProducto = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelEditarProducto = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelListaProductos = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panelRubros = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNuevoProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelEliminarProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelEditarProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelListaProductos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelRubros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNuevoProducto
@@ -65,7 +65,7 @@
             this.panelNuevoProducto.Name = "panelNuevoProducto";
             this.panelNuevoProducto.Size = new System.Drawing.Size(203, 199);
             this.panelNuevoProducto.TabIndex = 0;
-            this.panelNuevoProducto.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelNuevoProducto.Click += new System.EventHandler(this.panelNuevoProducto_Click);
             // 
             // label1
             // 
@@ -78,6 +78,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nuevo Producto";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Prueba_Rene.Properties.Resources.plus_square_regular;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelEliminarProducto
             // 
             this.panelEliminarProducto.BackColor = System.Drawing.Color.Firebrick;
@@ -88,6 +98,7 @@
             this.panelEliminarProducto.Name = "panelEliminarProducto";
             this.panelEliminarProducto.Size = new System.Drawing.Size(203, 199);
             this.panelEliminarProducto.TabIndex = 2;
+            this.panelEliminarProducto.Click += new System.EventHandler(this.panelEliminarProducto_Click);
             // 
             // label2
             // 
@@ -100,6 +111,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Borrar Producto";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Prueba_Rene.Properties.Resources.trash_alt_regular;
+            this.pictureBox2.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panelEditarProducto
             // 
             this.panelEditarProducto.BackColor = System.Drawing.Color.Firebrick;
@@ -109,7 +130,8 @@
             this.panelEditarProducto.Location = new System.Drawing.Point(243, 12);
             this.panelEditarProducto.Name = "panelEditarProducto";
             this.panelEditarProducto.Size = new System.Drawing.Size(203, 199);
-            this.panelEditarProducto.TabIndex = 3;
+            this.panelEditarProducto.TabIndex = 1;
+            this.panelEditarProducto.Click += new System.EventHandler(this.panelEditarProducto_Click);
             // 
             // label3
             // 
@@ -122,6 +144,16 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Editar Producto";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Prueba_Rene.Properties.Resources.edit_regular;
+            this.pictureBox3.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panelListaProductos
             // 
             this.panelListaProductos.BackColor = System.Drawing.Color.Firebrick;
@@ -131,9 +163,8 @@
             this.panelListaProductos.Location = new System.Drawing.Point(243, 246);
             this.panelListaProductos.Name = "panelListaProductos";
             this.panelListaProductos.Size = new System.Drawing.Size(203, 199);
-            this.panelListaProductos.TabIndex = 5;
+            this.panelListaProductos.TabIndex = 3;
             this.panelListaProductos.Click += new System.EventHandler(this.panelListaProductos_Click);
-            this.panelListaProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelListaProductos_Paint);
             // 
             // label5
             // 
@@ -146,6 +177,16 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Ver Producto";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Prueba_Rene.Properties.Resources.list_alt_regular;
+            this.pictureBox5.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
             // panelRubros
             // 
             this.panelRubros.BackColor = System.Drawing.Color.Firebrick;
@@ -155,7 +196,7 @@
             this.panelRubros.Location = new System.Drawing.Point(243, 483);
             this.panelRubros.Name = "panelRubros";
             this.panelRubros.Size = new System.Drawing.Size(203, 199);
-            this.panelRubros.TabIndex = 6;
+            this.panelRubros.TabIndex = 4;
             this.panelRubros.Click += new System.EventHandler(this.panelRubros_Click);
             // 
             // label4
@@ -179,46 +220,6 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Prueba_Rene.Properties.Resources.list_alt_regular;
-            this.pictureBox5.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Prueba_Rene.Properties.Resources.edit_regular;
-            this.pictureBox3.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Prueba_Rene.Properties.Resources.trash_alt_regular;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Prueba_Rene.Properties.Resources.plus_square_regular;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,19 +237,19 @@
             this.Load += new System.EventHandler(this.frmABMProductos_Load);
             this.panelNuevoProducto.ResumeLayout(false);
             this.panelNuevoProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelEliminarProducto.ResumeLayout(false);
             this.panelEliminarProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelEditarProducto.ResumeLayout(false);
             this.panelEditarProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelListaProductos.ResumeLayout(false);
             this.panelListaProductos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelRubros.ResumeLayout(false);
             this.panelRubros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

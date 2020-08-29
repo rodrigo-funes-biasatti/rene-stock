@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelDivider = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewRubros = new System.Windows.Forms.DataGridView();
@@ -87,33 +87,33 @@
             this.dataGridViewRubros.BackgroundColor = System.Drawing.Color.Firebrick;
             this.dataGridViewRubros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRubros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRubros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRubros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRubros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRubros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_rubro,
             this.nombre,
             this.descripcion});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRubros.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRubros.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRubros.GridColor = System.Drawing.Color.White;
             this.dataGridViewRubros.Location = new System.Drawing.Point(12, 72);
             this.dataGridViewRubros.Name = "dataGridViewRubros";
             this.dataGridViewRubros.ReadOnly = true;
             this.dataGridViewRubros.Size = new System.Drawing.Size(503, 188);
-            this.dataGridViewRubros.TabIndex = 3;
+            this.dataGridViewRubros.TabIndex = 0;
             this.dataGridViewRubros.SelectionChanged += new System.EventHandler(this.dataGridViewRubros_SelectionChanged);
             // 
             // id_rubro
@@ -157,7 +157,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(521, 136);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(158, 61);
-            this.btnBorrar.TabIndex = 4;
+            this.btnBorrar.TabIndex = 1;
             this.btnBorrar.Text = "Borrar seleccionado";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -197,7 +197,7 @@
             this.bntAgregarNuevo.Location = new System.Drawing.Point(493, 3);
             this.bntAgregarNuevo.Name = "bntAgregarNuevo";
             this.bntAgregarNuevo.Size = new System.Drawing.Size(171, 100);
-            this.bntAgregarNuevo.TabIndex = 7;
+            this.bntAgregarNuevo.TabIndex = 4;
             this.bntAgregarNuevo.Text = "Agregar";
             this.bntAgregarNuevo.UseVisualStyleBackColor = false;
             this.bntAgregarNuevo.Click += new System.EventHandler(this.bntAgregarNuevo_Click);
@@ -208,7 +208,7 @@
             this.txtDescripcionNuevo.Location = new System.Drawing.Point(152, 69);
             this.txtDescripcionNuevo.Name = "txtDescripcionNuevo";
             this.txtDescripcionNuevo.Size = new System.Drawing.Size(326, 34);
-            this.txtDescripcionNuevo.TabIndex = 9;
+            this.txtDescripcionNuevo.TabIndex = 3;
             // 
             // label4
             // 
@@ -227,7 +227,7 @@
             this.txtNombreNuevo.Location = new System.Drawing.Point(152, 3);
             this.txtNombreNuevo.Name = "txtNombreNuevo";
             this.txtNombreNuevo.Size = new System.Drawing.Size(205, 34);
-            this.txtNombreNuevo.TabIndex = 7;
+            this.txtNombreNuevo.TabIndex = 2;
             // 
             // label3
             // 
@@ -283,7 +283,7 @@
             this.txtDescripcionEditar.Location = new System.Drawing.Point(152, 69);
             this.txtDescripcionEditar.Name = "txtDescripcionEditar";
             this.txtDescripcionEditar.Size = new System.Drawing.Size(326, 34);
-            this.txtDescripcionEditar.TabIndex = 9;
+            this.txtDescripcionEditar.TabIndex = 6;
             // 
             // label6
             // 
@@ -302,7 +302,7 @@
             this.txtNombreEditar.Location = new System.Drawing.Point(152, 3);
             this.txtNombreEditar.Name = "txtNombreEditar";
             this.txtNombreEditar.Size = new System.Drawing.Size(205, 34);
-            this.txtNombreEditar.TabIndex = 7;
+            this.txtNombreEditar.TabIndex = 5;
             // 
             // label7
             // 

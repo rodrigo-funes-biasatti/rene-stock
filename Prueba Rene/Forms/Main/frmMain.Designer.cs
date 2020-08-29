@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.clock1 = new System.Windows.Forms.Timer(this.components);
             this.panelContent = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
@@ -117,7 +118,7 @@
             this.btnCambiarContraseña.ForeColor = System.Drawing.Color.White;
             this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 0);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(287, 58);
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(275, 58);
             this.btnCambiarContraseña.TabIndex = 5;
             this.btnCambiarContraseña.Text = "Cambiar Contraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
@@ -224,6 +225,7 @@
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panelContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;

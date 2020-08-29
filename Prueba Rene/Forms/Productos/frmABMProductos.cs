@@ -22,50 +22,48 @@ namespace Prueba_Rene.Forms.Productos
             principal = main;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void frmABMProductos_Load(object sender, EventArgs e)
         {
 
         }
 
         private void panelListaProductos_Click(object sender, EventArgs e)
         {
-            panel_principal.Controls.Clear();
-
             frmListaProductos listadoProductos = new frmListaProductos(panel_principal, this);
-            listadoProductos.TopLevel = false;
-
-            panel_principal.Controls.Add(listadoProductos);
-            listadoProductos.Show();
-        }
-
-        private void panelListaProductos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void frmABMProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void cargarListadoProductos()
-        {
-            frmListaProductos listadoProductos = new frmListaProductos(panel_principal, this);
-            listadoProductos.TopLevel = false;
-
-            panel_principal.Controls.Add(listadoProductos);
-            listadoProductos.Show();
+            cargarFormularioPanel(listadoProductos);
         }
 
         private void panelRubros_Click(object sender, EventArgs e)
         {
-            panel_principal.Controls.Clear();
-
             frmRubros frm_rubros = new frmRubros(panel_principal, this);
-            frm_rubros.TopLevel = false;
+            cargarFormularioPanel(frm_rubros);
+        }
 
-            panel_principal.Controls.Add(frm_rubros);
-            frm_rubros.Show();
+        private void panelNuevoProducto_Click(object sender, EventArgs e)
+        {
+            frmNuevoProducto frm_nuevoprod = new frmNuevoProducto(this, panel_principal);
+            cargarFormularioPanel(frm_nuevoprod);
+        }
+
+        private void cargarFormularioPanel(Form frm)
+        {
+            this.Hide();
+            frm.TopLevel = false;
+            panel_principal.Controls.Clear();
+            panel_principal.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void panelEditarProducto_Click(object sender, EventArgs e)
+        {
+            frmEditarProducto frm_editarprod = new frmEditarProducto(panel_principal, this);
+            cargarFormularioPanel(frm_editarprod);
+        }
+
+        private void panelEliminarProducto_Click(object sender, EventArgs e)
+        {
+            frmEliminarProducto frm_eliminarprod = new frmEliminarProducto(panel_principal, this);
+            cargarFormularioPanel(frm_eliminarprod);
         }
     }
 }

@@ -228,6 +228,87 @@ namespace Prueba_Rene.Datos
             }
         }
 
+        public bool agregarProducto(Producto p)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
 
+                string query = "INSERT INTO Productos (marca,precio_unitario,descripcion,id_rubro) VALUES (@marca, @precio_unitario, @descripcion, @id_rubro)";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@marca", p.Marca);
+                    cmd.Parameters.AddWithValue("@precio_unitario", p.Precio_unitario);
+                    cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
+                    cmd.Parameters.AddWithValue("@id_rubro", p.Id_rubro);
+
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                    else
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }
+        }
+
+        public bool editarProducto(Producto p)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "UPDATE Productos SET marca=@marca, precio_unitario=@precio_unitario, descripcion=@descripcion, id_rubro=@id_rubro WHERE id_prod=@id_prod";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@marca", p.Marca);
+                    cmd.Parameters.AddWithValue("@precio_unitario", p.Precio_unitario);
+                    cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
+                    cmd.Parameters.AddWithValue("@id_rubro", p.Id_rubro);
+                    cmd.Parameters.AddWithValue("@id_prod", p.Id_prod);
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                    else
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }
+        }
+
+        public bool borrarProducto(int id)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "DELETE FROM Productos WHERE id_prod=@id";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    int result = cmd.ExecuteNonQuery();
+                    if (result < 1)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                    else
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }
+        }
     }
 }

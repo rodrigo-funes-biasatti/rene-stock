@@ -77,6 +77,7 @@ namespace Prueba_Rene
 
         private void habilitarPanelesConfig(bool op)
         {
+            panelConfig.Controls.Add(btnCambiarContraseña);
             this.panelConfig.Visible = op;
         }
 
@@ -89,17 +90,15 @@ namespace Prueba_Rene
             else
             {
                 habilitarPanelesConfig(true);
+                panelConfig.Controls.Add(btnCambiarContraseña);
             }
         }
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
-            limpiarPanelPrincipal();
-            frmABMContraseña form = new frmABMContraseña();
-            form.TopLevel = false;
-
-            panelContent.Controls.Add(form);
-            form.Show();
+            frmABMContraseña frm_contra = new frmABMContraseña();
+            cargarFormularioPanel(frm_contra);
+            panelConfig.Controls.Add(btnCambiarContraseña);
         }
 
         private void btnLimpiarPanel_Click(object sender, EventArgs e)
@@ -108,28 +107,67 @@ namespace Prueba_Rene
         }
 
         public void limpiarPanelPrincipal()
-        {
-            FormCollection forms = Application.OpenForms;
-
+        { 
             foreach (IDisposable control in panelContent.Controls)
             {
                 control.Dispose();
             }
 
+            List<Form> forms = obtenerForms();
+            foreach (Form f in forms)
+            {
+                if (f.Name.Equals("frmMain"))
+                {
+                    continue;
+                }
+                f.Close();
+            }
+
+            //IEnumerator<FormCollection> eforms = new IEnumerator();
+
+            //for (int i = 0; i < forms.Count; i++)
+            //{ 
+            //    if (forms.get)
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        f.Close();
+            //    }
+            //}
+
+            panelConfig.Controls.Clear();
             GC.Collect();
             GC.WaitForPendingFinalizers();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
-        {
-
-            limpiarPanelPrincipal();
-
+        {   
             abmprod = new frmABMProductos(panelContent, this);
-            abmprod.TopLevel = false;
-            
-            panelContent.Controls.Add(abmprod);
-            abmprod.Show();
+            cargarFormularioPanel(abmprod);
+        }
+
+        private void cargarFormularioPanel(Form frm)
+        {
+            limpiarPanelPrincipal();
+            frm.TopLevel = false;
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private List<Form> obtenerForms()
+        {
+            List<Form> ret = new List<Form>();
+            FormCollection forms = Application.OpenForms;
+
+            foreach (Form f in forms)
+            {
+                ret.Add(f);
+            }
+
+            return ret;
         }
     }
 }
