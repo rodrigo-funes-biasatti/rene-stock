@@ -35,14 +35,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFiltroMarca = new System.Windows.Forms.TextBox();
             this.dataGridViewProductos = new System.Windows.Forms.DataGridView();
-            this.id_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rubro_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.id_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubro_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -110,6 +111,7 @@
             this.dataGridViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_prod,
             this.marca,
+            this.nombre,
             this.precio_unitario,
             this.descripcion,
             this.rubro_name});
@@ -128,40 +130,6 @@
             this.dataGridViewProductos.ReadOnly = true;
             this.dataGridViewProductos.Size = new System.Drawing.Size(667, 516);
             this.dataGridViewProductos.TabIndex = 1;
-            // 
-            // id_prod
-            // 
-            this.id_prod.DataPropertyName = "id_prod";
-            this.id_prod.HeaderText = "ID Producto";
-            this.id_prod.Name = "id_prod";
-            this.id_prod.ReadOnly = true;
-            // 
-            // marca
-            // 
-            this.marca.DataPropertyName = "marca";
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.ReadOnly = true;
-            // 
-            // precio_unitario
-            // 
-            this.precio_unitario.DataPropertyName = "precio_unitario";
-            this.precio_unitario.HeaderText = "Precio Unitario";
-            this.precio_unitario.Name = "precio_unitario";
-            this.precio_unitario.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // rubro_name
-            // 
-            this.rubro_name.HeaderText = "Rubro";
-            this.rubro_name.Name = "rubro_name";
-            this.rubro_name.ReadOnly = true;
             // 
             // panel2
             // 
@@ -191,6 +159,53 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             this.pictureBoxBack.MouseEnter += new System.EventHandler(this.pictureBoxBack_MouseEnter);
+            // 
+            // id_prod
+            // 
+            this.id_prod.DataPropertyName = "id_prod";
+            this.id_prod.FillWeight = 50F;
+            this.id_prod.HeaderText = "ID";
+            this.id_prod.Name = "id_prod";
+            this.id_prod.ReadOnly = true;
+            // 
+            // marca
+            // 
+            this.marca.DataPropertyName = "marca";
+            this.marca.FillWeight = 89.54314F;
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            this.marca.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 89.54314F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio_unitario
+            // 
+            this.precio_unitario.DataPropertyName = "precio_unitario";
+            this.precio_unitario.FillWeight = 89.54314F;
+            this.precio_unitario.HeaderText = "Precio Unitario";
+            this.precio_unitario.Name = "precio_unitario";
+            this.precio_unitario.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.FillWeight = 89.54314F;
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // rubro_name
+            // 
+            this.rubro_name.FillWeight = 89.54314F;
+            this.rubro_name.HeaderText = "Rubro";
+            this.rubro_name.Name = "rubro_name";
+            this.rubro_name.ReadOnly = true;
             // 
             // frmListaProductos
             // 
@@ -228,11 +243,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio_unitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn rubro_name;
-        private System.Windows.Forms.Label label2;
     }
 }

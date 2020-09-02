@@ -49,6 +49,7 @@
             this.dataGridViewProductos = new System.Windows.Forms.DataGridView();
             this.id_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio_unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rubro_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +59,8 @@
             this.backgroundWorkerCargarTabla = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerCargarCombo = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerEditarProducto = new System.ComponentModel.BackgroundWorker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
@@ -67,12 +70,12 @@
             // mtxtPrecioUnitario
             // 
             this.mtxtPrecioUnitario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtPrecioUnitario.Location = new System.Drawing.Point(186, 375);
+            this.mtxtPrecioUnitario.Location = new System.Drawing.Point(186, 429);
             this.mtxtPrecioUnitario.Mask = "00.00";
             this.mtxtPrecioUnitario.Name = "mtxtPrecioUnitario";
             this.mtxtPrecioUnitario.PromptChar = '0';
             this.mtxtPrecioUnitario.Size = new System.Drawing.Size(493, 34);
-            this.mtxtPrecioUnitario.TabIndex = 20;
+            this.mtxtPrecioUnitario.TabIndex = 4;
             // 
             // btnEditarProducto
             // 
@@ -84,7 +87,7 @@
             this.btnEditarProducto.Location = new System.Drawing.Point(464, 629);
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(215, 53);
-            this.btnEditarProducto.TabIndex = 27;
+            this.btnEditarProducto.TabIndex = 8;
             this.btnEditarProducto.Text = "Editar Producto";
             this.btnEditarProducto.UseVisualStyleBackColor = false;
             this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
@@ -110,7 +113,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(16, 629);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(201, 53);
-            this.btnLimpiarCampos.TabIndex = 25;
+            this.btnLimpiarCampos.TabIndex = 7;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
@@ -130,7 +133,7 @@
             this.cmbRubros.Location = new System.Drawing.Point(95, 562);
             this.cmbRubros.Name = "cmbRubros";
             this.cmbRubros.Size = new System.Drawing.Size(584, 34);
-            this.cmbRubros.TabIndex = 23;
+            this.cmbRubros.TabIndex = 6;
             // 
             // label5
             // 
@@ -154,10 +157,10 @@
             // rtxtDescripcion
             // 
             this.rtxtDescripcion.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtDescripcion.Location = new System.Drawing.Point(147, 425);
+            this.rtxtDescripcion.Location = new System.Drawing.Point(147, 482);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
-            this.rtxtDescripcion.Size = new System.Drawing.Size(532, 108);
-            this.rtxtDescripcion.TabIndex = 21;
+            this.rtxtDescripcion.Size = new System.Drawing.Size(532, 51);
+            this.rtxtDescripcion.TabIndex = 5;
             this.rtxtDescripcion.Text = "";
             // 
             // label3
@@ -165,7 +168,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 466);
+            this.label3.Location = new System.Drawing.Point(12, 482);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 24);
             this.label3.TabIndex = 29;
@@ -176,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 380);
+            this.label1.Location = new System.Drawing.Point(12, 434);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 24);
             this.label1.TabIndex = 28;
@@ -188,7 +191,7 @@
             this.txtMarca.Location = new System.Drawing.Point(92, 324);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(587, 34);
-            this.txtMarca.TabIndex = 19;
+            this.txtMarca.TabIndex = 2;
             // 
             // label2
             // 
@@ -248,6 +251,7 @@
             this.dataGridViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_prod,
             this.marca,
+            this.nombre,
             this.precio_unitario,
             this.descripcion,
             this.rubro_name});
@@ -271,17 +275,32 @@
             // 
             // id_prod
             // 
+            this.id_prod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.id_prod.DataPropertyName = "id_prod";
-            this.id_prod.HeaderText = "ID Producto";
+            this.id_prod.Frozen = true;
+            this.id_prod.HeaderText = "ID";
             this.id_prod.Name = "id_prod";
             this.id_prod.ReadOnly = true;
+            this.id_prod.Width = 50;
             // 
             // marca
             // 
+            this.marca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.marca.DataPropertyName = "marca";
+            this.marca.Frozen = true;
             this.marca.HeaderText = "Marca";
             this.marca.Name = "marca";
             this.marca.ReadOnly = true;
+            this.marca.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.Frozen = true;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
             // precio_unitario
             // 
@@ -348,12 +367,33 @@
             this.backgroundWorkerEditarProducto.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEditarProducto_DoWork);
             this.backgroundWorkerEditarProducto.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerEditarProducto_RunWorkerCompleted);
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(115, 375);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(564, 34);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 380);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 24);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Nombre: ";
+            // 
             // frmEditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(691, 694);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mtxtPrecioUnitario);
@@ -404,16 +444,19 @@
         private System.Windows.Forms.Label lblNuevoProducto;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_prod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_unitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rubro_name;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFiltroMarca;
         private System.ComponentModel.BackgroundWorker backgroundWorkerCargarTabla;
         private System.ComponentModel.BackgroundWorker backgroundWorkerCargarCombo;
         private System.ComponentModel.BackgroundWorker backgroundWorkerEditarProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_unitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rubro_name;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label8;
     }
 }

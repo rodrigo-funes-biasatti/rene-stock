@@ -52,6 +52,7 @@ namespace Prueba_Rene.Forms.Productos
         private void limpiarCampos()
         {
             txtMarca.Text = "";
+            txtNombre.Text = "";
             mtxtPrecioUnitario.Text = "";
             rtxtDescripcion.Text = "";
             cmbRubros.SelectedIndex = -1;
@@ -76,17 +77,19 @@ namespace Prueba_Rene.Forms.Productos
         {
             p_agregar = new Producto();
             string marca;
+            string nombre;
             double precio_unitario;
             string descripcion;
             int id_rubro;
 
-            if (txtMarca.Text.Equals("") || mtxtPrecioUnitario.Text.Equals("") || rtxtDescripcion.Text.Equals("") || cmbRubros.SelectedIndex.Equals(-1))
+            if (txtMarca.Text.Equals("") || txtNombre.Text.Equals("") || mtxtPrecioUnitario.Text.Equals("") || rtxtDescripcion.Text.Equals("") || cmbRubros.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Faltan datos a completar.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             marca = txtMarca.Text;
+            nombre = txtNombre.Text;
             try
             {
                 precio_unitario = Convert.ToDouble(mtxtPrecioUnitario.Text);
@@ -100,6 +103,7 @@ namespace Prueba_Rene.Forms.Productos
             id_rubro = Convert.ToInt32(cmbRubros.SelectedValue);
 
             p_agregar.Marca = marca;
+            p_agregar.Nombre = nombre;
             p_agregar.Precio_unitario = precio_unitario;
             p_agregar.Descripcion = descripcion;
             p_agregar.Id_rubro = id_rubro;
@@ -125,11 +129,12 @@ namespace Prueba_Rene.Forms.Productos
             {
                 MessageBox.Show("Hubo un error al agregar el Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            limpiarCampos();
+            
         }
 
         private void backgroundWorkerAgregarProducto_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
+        {         
+            limpiarCampos();
             loading.Close();
         }
     }

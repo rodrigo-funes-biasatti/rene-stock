@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
@@ -230,28 +231,55 @@ namespace Prueba_Rene.Datos
 
         public bool agregarProducto(Producto p)
         {
+            MySqlTransaction nuevoProd;
+
             using (var con = new MySqlConnection(cadena_conexion))
             {
                 con.Open();
+                nuevoProd = con.BeginTransaction();
 
-                string query = "INSERT INTO Productos (marca,precio_unitario,descripcion,id_rubro) VALUES (@marca, @precio_unitario, @descripcion, @id_rubro)";
+                string query = "INSERT INTO Productos (marca,nombre,precio_unitario,descripcion,id_rubro) VALUES (@marca, @nombre, @precio_unitario, @descripcion, @id_rubro)";
                 using (var cmd = new MySqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@marca", p.Marca);
-                    cmd.Parameters.AddWithValue("@precio_unitario", p.Precio_unitario);
-                    cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
-                    cmd.Parameters.AddWithValue("@id_rubro", p.Id_rubro);
+                    cmd.Transaction = nuevoProd;
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@marca", p.Marca);
+                        cmd.Parameters.AddWithValue("@nombre", p.Nombre);
+                        cmd.Parameters.AddWithValue("@precio_unitario", p.Precio_unitario);
+                        cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
+                        cmd.Parameters.AddWithValue("@id_rubro", p.Id_rubro);
 
-                    int result = cmd.ExecuteNonQuery();
-                    if (result < 1)
-                    {
-                        con.Close();
-                        return false;
+                        int result = cmd.ExecuteNonQuery();
+                        if (result < 1)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+
+                            nuevoProd.Commit();
+                            return true;
+                        }
                     }
-                    else
+                    catch(Exception e)
+                    {
+                        try
+                        {
+                            nuevoProd.Rollback();
+                        }
+                        catch(MySqlException ex)
+                        {
+                            if(nuevoProd.Connection != null)
+                            {
+                                throw ex;
+                            }
+                        }
+                        throw e;
+                    }
+                    finally
                     {
                         con.Close();
-                        return true;
                     }
                 }
             }
@@ -263,10 +291,11 @@ namespace Prueba_Rene.Datos
             {
                 con.Open();
 
-                string query = "UPDATE Productos SET marca=@marca, precio_unitario=@precio_unitario, descripcion=@descripcion, id_rubro=@id_rubro WHERE id_prod=@id_prod";
+                string query = "UPDATE Productos SET marca=@marca, nombre=@nombre, precio_unitario=@precio_unitario, descripcion=@descripcion, id_rubro=@id_rubro WHERE id_prod=@id_prod";
                 using (var cmd = new MySqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@marca", p.Marca);
+                    cmd.Parameters.AddWithValue("@nombre", p.Nombre);
                     cmd.Parameters.AddWithValue("@precio_unitario", p.Precio_unitario);
                     cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
                     cmd.Parameters.AddWithValue("@id_rubro", p.Id_rubro);
@@ -307,6 +336,161 @@ namespace Prueba_Rene.Datos
                         con.Close();
                         return true;
                     }
+                }
+            }
+        }
+
+        public List<Producto> obtenerProdPorRubro(int id_rubro)
+        {
+            List<Producto> productos = new List<Producto>();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                try
+                {
+                    string query = "SELECT * FROM Productos WHERE id_rubro = @id_rubro";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@id_rubro", id_rubro);
+
+                        var reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            Producto p = new Producto();
+                            p.Id_prod = Convert.ToInt32(reader["id_prod"]);
+                            p.Marca = reader["marca"].ToString();
+                            p.Nombre = reader["nombre"].ToString();
+                            p.Precio_unitario = Convert.ToDouble(reader["precio_unitario"]);
+                            p.Descripcion = reader["descripcion"].ToString();
+                            p.Id_rubro = Convert.ToInt32(reader["id_rubro"]);
+
+                            productos.Add(p);
+                        }
+
+                        return productos;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+        }
+
+        public SStock obtenerStock(int id_prod)
+        {
+            SStock s = new SStock();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {             
+                con.Open();
+                try
+                {
+                    string query = "SELECT * FROM Stock WHERE id_prod = @id_prod";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@id_prod", id_prod);
+
+                        var reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            
+                            s.Id_prod = Convert.ToInt32(reader["id_prod"]);
+                            s.Ult_fecha_modif = Convert.ToDateTime(reader["ult_fecha_modif"]);
+                            s.Cantidad_actual = Convert.ToDouble(reader["cantidad_actual"]);
+                        }
+
+                        return s;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public bool actulizarStock(double cantidad_nueva, int id_prod)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "UPDATE Stock SET cantidad_actual = @cantidad_actual WHERE id_prod=@id_prod";
+
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@cantidad_actual", cantidad_nueva);
+                        cmd.Parameters.AddWithValue("@id_prod", id_prod);
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if(result < 1)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+            }
+        }
+
+        public List<DataGraphStock> obtenerDatosGraph(int id_rubro)
+        {
+            List<DataGraphStock> dataGraphStocks = new List<DataGraphStock>();
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                try
+                {
+                    string query = "SELECT p.nombre, s.cantidad_actual FROM Productos p JOIN Stock s ON p.id_prod = s.id_prod WHERE p.id_rubro = @id_rubro ORDER BY p.nombre ASC";
+
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+
+                        cmd.Parameters.AddWithValue("@id_rubro", id_rubro);
+                        var reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            DataGraphStock dgs = new DataGraphStock();
+
+                            dgs.Nombre_prod = reader["nombre"].ToString();
+                            dgs.Stock_actual = Convert.ToDouble(reader["cantidad_actual"]);
+
+                            dataGraphStocks.Add(dgs);
+                        }
+
+                        return dataGraphStocks;
+                    }
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
         }

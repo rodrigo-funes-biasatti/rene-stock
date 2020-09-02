@@ -47,6 +47,8 @@
             this.backgroundWorkerCargarCombo = new System.ComponentModel.BackgroundWorker();
             this.mtxtPrecioUnitario = new System.Windows.Forms.MaskedTextBox();
             this.backgroundWorkerAgregarProducto = new System.ComponentModel.BackgroundWorker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 232);
+            this.label1.Location = new System.Drawing.Point(12, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 24);
             this.label1.TabIndex = 9;
@@ -105,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 333);
+            this.label3.Location = new System.Drawing.Point(12, 404);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 24);
             this.label3.TabIndex = 11;
@@ -114,16 +116,16 @@
             // rtxtDescripcion
             // 
             this.rtxtDescripcion.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtDescripcion.Location = new System.Drawing.Point(147, 292);
+            this.rtxtDescripcion.Location = new System.Drawing.Point(147, 363);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
             this.rtxtDescripcion.Size = new System.Drawing.Size(532, 108);
-            this.rtxtDescripcion.TabIndex = 2;
+            this.rtxtDescripcion.TabIndex = 3;
             this.rtxtDescripcion.Text = "";
             // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(12, 436);
+            this.label4.Location = new System.Drawing.Point(12, 500);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(667, 2);
             this.label4.TabIndex = 13;
@@ -133,7 +135,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 474);
+            this.label5.Location = new System.Drawing.Point(12, 538);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 24);
             this.label5.TabIndex = 14;
@@ -143,15 +145,15 @@
             // 
             this.cmbRubros.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRubros.FormattingEnabled = true;
-            this.cmbRubros.Location = new System.Drawing.Point(95, 469);
+            this.cmbRubros.Location = new System.Drawing.Point(95, 533);
             this.cmbRubros.Name = "cmbRubros";
             this.cmbRubros.Size = new System.Drawing.Size(584, 34);
-            this.cmbRubros.TabIndex = 3;
+            this.cmbRubros.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(12, 533);
+            this.label6.Location = new System.Drawing.Point(12, 597);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(667, 2);
             this.label6.TabIndex = 16;
@@ -166,7 +168,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(16, 629);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(201, 53);
-            this.btnLimpiarCampos.TabIndex = 4;
+            this.btnLimpiarCampos.TabIndex = 5;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
@@ -192,7 +194,7 @@
             this.btnNuevoProducto.Location = new System.Drawing.Point(464, 629);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Size = new System.Drawing.Size(215, 53);
-            this.btnNuevoProducto.TabIndex = 5;
+            this.btnNuevoProducto.TabIndex = 6;
             this.btnNuevoProducto.Text = "Agregar Producto";
             this.btnNuevoProducto.UseVisualStyleBackColor = false;
             this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
@@ -205,17 +207,36 @@
             // mtxtPrecioUnitario
             // 
             this.mtxtPrecioUnitario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtPrecioUnitario.Location = new System.Drawing.Point(186, 227);
+            this.mtxtPrecioUnitario.Location = new System.Drawing.Point(186, 298);
             this.mtxtPrecioUnitario.Mask = "00.00";
             this.mtxtPrecioUnitario.Name = "mtxtPrecioUnitario";
             this.mtxtPrecioUnitario.PromptChar = '0';
             this.mtxtPrecioUnitario.Size = new System.Drawing.Size(493, 34);
-            this.mtxtPrecioUnitario.TabIndex = 1;
+            this.mtxtPrecioUnitario.TabIndex = 2;
             // 
             // backgroundWorkerAgregarProducto
             // 
             this.backgroundWorkerAgregarProducto.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerAgregarProducto_DoWork);
             this.backgroundWorkerAgregarProducto.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerAgregarProducto_RunWorkerCompleted);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(115, 230);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(564, 34);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 235);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Nombre: ";
             // 
             // frmNuevoProducto
             // 
@@ -223,6 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(691, 694);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.mtxtPrecioUnitario);
             this.Controls.Add(this.btnNuevoProducto);
             this.Controls.Add(this.pictureBoxBack);
@@ -268,5 +291,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorkerCargarCombo;
         private System.Windows.Forms.MaskedTextBox mtxtPrecioUnitario;
         private System.ComponentModel.BackgroundWorker backgroundWorkerAgregarProducto;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label7;
     }
 }

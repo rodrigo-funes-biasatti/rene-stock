@@ -103,11 +103,13 @@ namespace Prueba_Rene.Forms.Productos
 
             prod_seleccionado.Id_prod = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[1].Value);
             prod_seleccionado.Marca = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            prod_seleccionado.Precio_unitario = Convert.ToDouble(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[3].Value);
-            prod_seleccionado.Descripcion = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            prod_seleccionado.Id_rubro = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[5].Value);
+            prod_seleccionado.Nombre = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            prod_seleccionado.Precio_unitario = Convert.ToDouble(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[4].Value);
+            prod_seleccionado.Descripcion = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            prod_seleccionado.Id_rubro = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[6].Value);
 
             txtMarca.Text = prod_seleccionado.Marca;
+            txtNombre.Text = prod_seleccionado.Nombre;
             mtxtPrecioUnitario.Text = prod_seleccionado.Precio_unitario.ToString();
             rtxtDescripcion.Text = prod_seleccionado.Descripcion;
             cmbRubros.SelectedValue = prod_seleccionado.Id_rubro;    
@@ -137,6 +139,7 @@ namespace Prueba_Rene.Forms.Productos
         private void limpiarCampos()
         {
             txtMarca.Text = "";
+            txtNombre.Text = "";
             mtxtPrecioUnitario.Text = "";
             rtxtDescripcion.Text = "";
             cmbRubros.SelectedIndex = -1;
@@ -157,6 +160,7 @@ namespace Prueba_Rene.Forms.Productos
             }
 
             prod_seleccionado.Marca = txtMarca.Text;
+            prod_seleccionado.Nombre = txtNombre.Text;
             prod_seleccionado.Precio_unitario = Convert.ToDouble(mtxtPrecioUnitario.Text);
             prod_seleccionado.Descripcion = rtxtDescripcion.Text;
             prod_seleccionado.Id_rubro = Convert.ToInt32(cmbRubros.SelectedValue);

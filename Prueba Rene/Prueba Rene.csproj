@@ -39,6 +39,7 @@
     <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\DataGraphStock.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Rubro.cs" />
+    <Compile Include="Clases\SStock.cs" />
     <Compile Include="Datos\accesoDatos.cs" />
     <Compile Include="Forms\Contraseñas\frmABMContraseña.cs">
       <SubType>Form</SubType>
@@ -59,10 +62,16 @@
     <Compile Include="Forms\Contraseñas\frmABMContraseña.Designer.cs">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLoading.cs">
+    <Compile Include="Forms\Remitos\frmMenuRemitos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLoading.Designer.cs">
+    <Compile Include="Forms\Remitos\frmMenuRemitos.Designer.cs">
+      <DependentUpon>frmMenuRemitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Resources\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Resources\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main\frmMain.cs">
@@ -114,11 +123,38 @@
     <Compile Include="Forms\Rubros\frmRubros.Designer.cs">
       <DependentUpon>frmRubros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Stock\frmConsultarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmConsultarStock.Designer.cs">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmEditarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmEditarStock.Designer.cs">
+      <DependentUpon>frmEditarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmGraficos.Designer.cs">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmmenuStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmmenuStock.Designer.cs">
+      <DependentUpon>frmmenuStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLoading.resx">
+    <EmbeddedResource Include="Forms\Remitos\frmMenuRemitos.resx">
+      <DependentUpon>frmMenuRemitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Resources\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\frmMain.resx">
@@ -144,6 +180,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Rubros\frmRubros.resx">
       <DependentUpon>frmRubros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmConsultarStock.aa-ER.resx">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmConsultarStock.resx">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmEditarStock.resx">
+      <DependentUpon>frmEditarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmGraficos.resx">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmmenuStock.resx">
+      <DependentUpon>frmmenuStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,6 +231,8 @@
     <None Include="Resources\list-alt-regular.png" />
     <None Include="Resources\layer-group-solid.png" />
     <Content Include="loco.ico" />
+    <None Include="Resources\chart-bar-solid.png" />
+    <None Include="Resources\file-alt-solid.png" />
     <Content Include="Resources\loco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

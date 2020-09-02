@@ -32,3 +32,11 @@ D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_R
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Productos.frmNuevoProducto.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Productos.frmEditarProducto.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Productos.frmEliminarProducto.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Stock.frmMenuStock.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\aa-ER\Prueba Rene.resources.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.aa-ER.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\aa-ER\Prueba Rene.resources.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Stock.frmEditarStock.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Stock.frmGraficos.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Remitos.frmMenuRemitos.resources

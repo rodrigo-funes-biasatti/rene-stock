@@ -124,9 +124,10 @@ namespace Prueba_Rene.Forms.Productos
 
             prod_seleccionado.Id_prod = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[1].Value);
             prod_seleccionado.Marca = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            prod_seleccionado.Precio_unitario = Convert.ToDouble(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[3].Value);
-            prod_seleccionado.Descripcion = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            prod_seleccionado.Id_rubro = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[5].Value);
+            prod_seleccionado.Nombre = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            prod_seleccionado.Precio_unitario = Convert.ToDouble(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[4].Value);
+            prod_seleccionado.Descripcion = dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            prod_seleccionado.Id_rubro = Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[6].Value);
         }
 
         private void backgroundWorkerBorrarProducto_DoWork(object sender, DoWorkEventArgs e)
