@@ -62,6 +62,12 @@
     <Compile Include="Forms\Contraseñas\frmABMContraseña.Designer.cs">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Remitos\frmGenerarRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmGenerarRemito.Designer.cs">
+      <DependentUpon>frmGenerarRemito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Remitos\frmMenuRemitos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmGenerarRemito.resx">
+      <DependentUpon>frmGenerarRemito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Remitos\frmMenuRemitos.resx">
       <DependentUpon>frmMenuRemitos.cs</DependentUpon>
