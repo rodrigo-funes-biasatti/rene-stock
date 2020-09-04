@@ -96,6 +96,7 @@
             this.btnRemito.Text = "Remitos";
             this.btnRemito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemito.UseVisualStyleBackColor = false;
+            this.btnRemito.Click += new System.EventHandler(this.btnRemito_Click);
             // 
             // panelConfig
             // 

@@ -134,7 +134,7 @@ namespace Prueba_Rene.Forms.Productos
         {
             if (ad.borrarProducto(prod_seleccionado.Id_prod))
             {
-                MessageBox.Show("Se ha Eliminado el Producto con éxito.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se ha Eliminado el Producto con éxito.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else

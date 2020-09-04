@@ -1,4 +1,6 @@
-﻿using Prueba_Rene.Forms;
+﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Forms;
+using Prueba_Rene.Forms.Remitos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

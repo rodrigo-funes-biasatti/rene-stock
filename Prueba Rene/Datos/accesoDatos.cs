@@ -87,7 +87,6 @@ namespace Prueba_Rene.Datos
                             return true;
                         }
                     }
-                    con.Close();
                 }
             }
         }
@@ -493,6 +492,207 @@ namespace Prueba_Rene.Datos
                     con.Close();
                 }
             }
+        }
+
+        public DataTable obtenerProductosTablaRemito()
+        {
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                string query = "SELECT p.id_prod, p.marca, p.nombre, p.precio_unitario, s.cantidad_actual FROM Productos p JOIN Stock s ON p.id_prod = s.id_prod ";
+                using (var da = new MySqlDataAdapter(query, con))
+                {
+                    da.Fill(ret);
+                }
+                con.Close();
+            }
+            return ret;
+        }
+
+        public List<Condicion_Venta> obtenerCondicionVenta()
+        {
+            List<Condicion_Venta> condiciones = new List<Condicion_Venta>();
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                try
+                {
+                    string query = "SELECT * FROM Condicion_Venta";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        var reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            Condicion_Venta c = new Condicion_Venta()
+                            {
+                                Id_condicion_venta = Convert.ToInt32(reader["id_condicion_venta"]),
+                                Descripcion = reader["descripcion"].ToString()
+                            };
+                            condiciones.Add(c);
+                        }
+
+                        return condiciones;
+                    }
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();             
+                }
+            }
+        }
+
+        public int obtenerNroRemito()
+        {
+            int ret;
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                try
+                {
+                    string query = "SELECT MAX(codigo_rem) FROM Remitos";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        ret = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+                return ret;
+            }
+        }
+
+        public bool agregarRemito(Remito remito, List<Item_Remito> items)
+        {
+            MySqlTransaction agregarRemito;
+            //MySqlTransaction agregarItems;
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                agregarRemito = con.BeginTransaction();
+
+                string query = "INSERT INTO Remitos (codigo_rem, id_condicion_venta, factura_nro, fecha_remito, cod_barra, observaciones, total_remito, vendedor) VALUES (@codigo_rem, @id_condicion_venta, @factura_nro, @fecha_remito, @cod_barra, @observaciones, @total_remito, @vendedor)";
+                using (var cmdRemitos = new MySqlCommand(query, con))
+                {
+                    cmdRemitos.Transaction = agregarRemito;
+                    try
+                    {
+                        cmdRemitos.Parameters.AddWithValue("@codigo_rem", remito.Codigo_remito);
+                        cmdRemitos.Parameters.AddWithValue("@id_condicion_venta", remito.Id_condicion_venta);
+                        cmdRemitos.Parameters.AddWithValue("@factura_nro", remito.Factura_nro);
+                        cmdRemitos.Parameters.AddWithValue("@fecha_remito", remito.Fecha_remito);
+                        cmdRemitos.Parameters.AddWithValue("@cod_barra", remito.Codigo_barra);
+                        cmdRemitos.Parameters.AddWithValue("@observaciones", remito.Observaciones);
+                        cmdRemitos.Parameters.AddWithValue("@total_remito", remito.Total_remito);
+                        cmdRemitos.Parameters.AddWithValue("@vendedor", remito.Vendedor);
+
+                        int result = cmdRemitos.ExecuteNonQuery();
+
+                        if(result < 1)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            string query2 = "INSERT INTO Item_Remito (codigo_rem, id_prod, cantidad, precio_unitario, subtotal) VALUES (@codigo_rem, @id_prod, @cantidad, @precio_unitario, @subtotal)";
+
+                            using (var cmdItems = new MySqlCommand(query2, con))
+                            {
+                                cmdItems.Transaction = agregarRemito;
+
+                                try
+                                {
+                                    foreach(Item_Remito i in items)
+                                    {
+                                        cmdItems.Parameters.Clear();
+                                        cmdItems.Parameters.AddWithValue("@codigo_rem", remito.Codigo_remito);
+                                        cmdItems.Parameters.AddWithValue("@id_prod", i.Id_prod);
+                                        cmdItems.Parameters.AddWithValue("@cantidad", i.Cantidad);
+                                        cmdItems.Parameters.AddWithValue("@precio_unitario", i.Precio_unitario);
+                                        cmdItems.Parameters.AddWithValue("@subtotal", i.Subtotal);
+
+                                        int result1 = cmdItems.ExecuteNonQuery();
+
+                                        if(result1 < 1)
+                                        {
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
+                                    }
+                                }
+                                catch(Exception e)
+                                {
+                                    throw e;
+                                }
+                            }
+                        }
+                    }
+                    catch(Exception e)
+                    {
+                        try
+                        {
+                            agregarRemito.Rollback();
+                        }
+                        catch(MySqlException ex)
+                        {
+                            throw ex;
+                        }
+                        throw e;
+                    }
+                    finally
+                    {
+                        agregarRemito.Commit();
+                        con.Close();
+                    }
+                }
+                
+                return true;
+            }
+        }
+
+        public DataTable obtenerDatosReporteRemito(int codigo_rem)
+        {
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "SELECT i.codigo_rem, cv.descripcion, r.factura_nro, r.fecha_remito, r.cod_barra, r.observaciones, r.total_remito, r.vendedor, i.id_prod, p.marca, p.nombre, i.cantidad, i.precio_unitario, i.subtotal FROM Condicion_Venta cv JOIN Remitos r ON cv.id_condicion_venta = r.id_condicion_venta JOIN Item_Remito i ON r.codigo_rem = i.codigo_rem JOIN Productos p ON i.id_prod = p.id_prod WHERE r.codigo_rem IN(SELECT MAX(codigo_rem) FROM Remitos)";
+                try
+                {
+                    using (var da = new MySqlDataAdapter(query, con))
+                    {
+                        da.Fill(ret);
+                    }
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            return ret;
         }
     }
 }

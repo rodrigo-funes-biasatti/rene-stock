@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,16 +48,22 @@
             this.cmbVendedor = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridViewProductos = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad_actual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtFiltroMarca = new System.Windows.Forms.TextBox();
             this.dataGridViewRemito = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_unitario_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,11 +74,8 @@
             this.btnQuitarSelec = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.backgroundWorker1CargarTablaProductos = new System.ComponentModel.BackgroundWorker();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad_actual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorkerCargarComboCondiciones = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerGenerarRemito = new System.ComponentModel.BackgroundWorker();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
@@ -138,15 +141,17 @@
             this.txtNroRemito.Name = "txtNroRemito";
             this.txtNroRemito.Size = new System.Drawing.Size(166, 32);
             this.txtNroRemito.TabIndex = 0;
+            this.txtNroRemito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtNroFactura
             // 
-            this.txtNroFactura.Enabled = false;
             this.txtNroFactura.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroFactura.Location = new System.Drawing.Point(513, 72);
             this.txtNroFactura.Name = "txtNroFactura";
             this.txtNroFactura.Size = new System.Drawing.Size(163, 32);
             this.txtNroFactura.TabIndex = 1;
+            this.txtNroFactura.Text = "0";
+            this.txtNroFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -161,7 +166,6 @@
             // 
             // txtCodigoBarras
             // 
-            this.txtCodigoBarras.Enabled = false;
             this.txtCodigoBarras.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoBarras.Location = new System.Drawing.Point(183, 110);
             this.txtCodigoBarras.Name = "txtCodigoBarras";
@@ -238,14 +242,14 @@
             this.dataGridViewProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductos.BackgroundColor = System.Drawing.Color.Firebrick;
             this.dataGridViewProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -253,19 +257,61 @@
             this.nombre,
             this.precio_unitario,
             this.cantidad_actual});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewProductos.Location = new System.Drawing.Point(9, 248);
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.ReadOnly = true;
             this.dataGridViewProductos.Size = new System.Drawing.Size(667, 89);
             this.dataGridViewProductos.TabIndex = 6;
+            this.dataGridViewProductos.SelectionChanged += new System.EventHandler(this.dataGridViewProductos_SelectionChanged);
+            this.dataGridViewProductos.Sorted += new System.EventHandler(this.dataGridViewProductos_Sorted);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id_prod";
+            this.ID.FillWeight = 50F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // marca
+            // 
+            this.marca.DataPropertyName = "marca";
+            this.marca.FillWeight = 93.27411F;
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            this.marca.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 93.27411F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio_unitario
+            // 
+            this.precio_unitario.DataPropertyName = "precio_unitario";
+            this.precio_unitario.FillWeight = 70F;
+            this.precio_unitario.HeaderText = "Precio Unitario";
+            this.precio_unitario.Name = "precio_unitario";
+            this.precio_unitario.ReadOnly = true;
+            // 
+            // cantidad_actual
+            // 
+            this.cantidad_actual.DataPropertyName = "cantidad_actual";
+            this.cantidad_actual.FillWeight = 70F;
+            this.cantidad_actual.HeaderText = "Stock";
+            this.cantidad_actual.Name = "cantidad_actual";
+            this.cantidad_actual.ReadOnly = true;
             // 
             // btnAgregar
             // 
@@ -280,6 +326,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label9
             // 
@@ -294,7 +341,6 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Enabled = false;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(99, 348);
             this.txtCantidad.Name = "txtCantidad";
@@ -314,12 +360,12 @@
             // 
             // txtFiltroMarca
             // 
-            this.txtFiltroMarca.Enabled = false;
             this.txtFiltroMarca.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltroMarca.Location = new System.Drawing.Point(151, 210);
             this.txtFiltroMarca.Name = "txtFiltroMarca";
             this.txtFiltroMarca.Size = new System.Drawing.Size(525, 32);
             this.txtFiltroMarca.TabIndex = 5;
+            this.txtFiltroMarca.TextChanged += new System.EventHandler(this.txtFiltroMarca_TextChanged);
             // 
             // dataGridViewRemito
             // 
@@ -328,62 +374,72 @@
             this.dataGridViewRemito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRemito.BackgroundColor = System.Drawing.Color.Firebrick;
             this.dataGridViewRemito.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRemito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRemito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewRemito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRemito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
+            this.id_prod,
+            this.marca_r,
+            this.nombre_r,
+            this.cantidad_r,
+            this.precio_unitario_r,
             this.subtotal});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRemito.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewRemito.Location = new System.Drawing.Point(9, 402);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRemito.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewRemito.Location = new System.Drawing.Point(9, 395);
             this.dataGridViewRemito.Name = "dataGridViewRemito";
             this.dataGridViewRemito.ReadOnly = true;
             this.dataGridViewRemito.Size = new System.Drawing.Size(667, 145);
             this.dataGridViewRemito.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn1
+            // id_prod
             // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 50F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.id_prod.FillWeight = 50F;
+            this.id_prod.HeaderText = "ID";
+            this.id_prod.Name = "id_prod";
+            this.id_prod.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // marca_r
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.marca_r.HeaderText = "Marca";
+            this.marca_r.Name = "marca_r";
+            this.marca_r.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // nombre_r
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.nombre_r.HeaderText = "Nombre";
+            this.nombre_r.Name = "nombre_r";
+            this.nombre_r.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // cantidad_r
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.cantidad_r.FillWeight = 50F;
+            this.cantidad_r.HeaderText = "Cantidad";
+            this.cantidad_r.Name = "cantidad_r";
+            this.cantidad_r.ReadOnly = true;
+            // 
+            // precio_unitario_r
+            // 
+            this.precio_unitario_r.FillWeight = 70F;
+            this.precio_unitario_r.HeaderText = "Precio_Unitario";
+            this.precio_unitario_r.Name = "precio_unitario_r";
+            this.precio_unitario_r.ReadOnly = true;
             // 
             // subtotal
             // 
+            this.subtotal.FillWeight = 70F;
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
@@ -392,7 +448,7 @@
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(9, 387);
+            this.label11.Location = new System.Drawing.Point(9, 380);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(667, 2);
             this.label11.TabIndex = 76;
@@ -432,13 +488,14 @@
             this.btnGenerarRemito.TabIndex = 13;
             this.btnGenerarRemito.Text = "Generar Remito";
             this.btnGenerarRemito.UseVisualStyleBackColor = false;
+            this.btnGenerarRemito.Click += new System.EventHandler(this.btnGenerarRemito_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(5, 555);
+            this.label13.Location = new System.Drawing.Point(5, 543);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(156, 24);
             this.label13.TabIndex = 80;
@@ -447,7 +504,7 @@
             // rtxtObservaciones
             // 
             this.rtxtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtObservaciones.Location = new System.Drawing.Point(167, 555);
+            this.rtxtObservaciones.Location = new System.Drawing.Point(167, 546);
             this.rtxtObservaciones.Name = "rtxtObservaciones";
             this.rtxtObservaciones.Size = new System.Drawing.Size(367, 69);
             this.rtxtObservaciones.TabIndex = 11;
@@ -460,12 +517,13 @@
             this.btnQuitarSelec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarSelec.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarSelec.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarSelec.Location = new System.Drawing.Point(540, 555);
+            this.btnQuitarSelec.Location = new System.Drawing.Point(540, 546);
             this.btnQuitarSelec.Name = "btnQuitarSelec";
             this.btnQuitarSelec.Size = new System.Drawing.Size(136, 69);
             this.btnQuitarSelec.TabIndex = 12;
             this.btnQuitarSelec.Text = "Quitar Seleccionado";
             this.btnQuitarSelec.UseVisualStyleBackColor = false;
+            this.btnQuitarSelec.Click += new System.EventHandler(this.btnQuitarSelec_Click);
             // 
             // btnLimpiarCampos
             // 
@@ -485,45 +543,17 @@
             // backgroundWorker1CargarTablaProductos
             // 
             this.backgroundWorker1CargarTablaProductos.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1CargarTablaProductos_DoWork);
+            this.backgroundWorker1CargarTablaProductos.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1CargarTablaProductos_RunWorkerCompleted);
             // 
-            // ID
+            // backgroundWorkerCargarComboCondiciones
             // 
-            this.ID.DataPropertyName = "id_prod";
-            this.ID.FillWeight = 50F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.backgroundWorkerCargarComboCondiciones.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerCargarComboCondiciones_DoWork);
+            this.backgroundWorkerCargarComboCondiciones.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerCargarComboCondiciones_RunWorkerCompleted);
             // 
-            // marca
+            // backgroundWorkerGenerarRemito
             // 
-            this.marca.DataPropertyName = "marca";
-            this.marca.FillWeight = 93.27411F;
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.FillWeight = 93.27411F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // precio_unitario
-            // 
-            this.precio_unitario.DataPropertyName = "precio_unitario";
-            this.precio_unitario.FillWeight = 93.27411F;
-            this.precio_unitario.HeaderText = "Precio Unitario";
-            this.precio_unitario.Name = "precio_unitario";
-            this.precio_unitario.ReadOnly = true;
-            // 
-            // cantidad_actual
-            // 
-            this.cantidad_actual.FillWeight = 93.27411F;
-            this.cantidad_actual.HeaderText = "Stock";
-            this.cantidad_actual.Name = "cantidad_actual";
-            this.cantidad_actual.ReadOnly = true;
+            this.backgroundWorkerGenerarRemito.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerGenerarRemito_DoWork);
+            this.backgroundWorkerGenerarRemito.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerGenerarRemito_RunWorkerCompleted);
             // 
             // frmGenerarRemito
             // 
@@ -597,11 +627,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtFiltroMarca;
         private System.Windows.Forms.DataGridView dataGridViewRemito;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblTotalRemito;
@@ -611,10 +636,18 @@
         private System.Windows.Forms.Button btnQuitarSelec;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.ComponentModel.BackgroundWorker backgroundWorker1CargarTablaProductos;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerCargarComboCondiciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio_unitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_actual;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marca_r;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_r;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad_r;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_unitario_r;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerGenerarRemito;
     }
 }

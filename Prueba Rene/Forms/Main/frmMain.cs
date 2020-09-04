@@ -1,5 +1,6 @@
 ﻿using Prueba_Rene.Forms.ABM;
 using Prueba_Rene.Forms.Productos;
+using Prueba_Rene.Forms.Remitos;
 using Prueba_Rene.Forms.Stock;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Prueba_Rene
         //List<Form> secuencia_panel;
         frmABMProductos abmprod;
         frmMenuStock menuStock;
+        frmMenuRemitos menuRemitos;
 
         Timer t = new Timer();
 
@@ -177,5 +179,13 @@ namespace Prueba_Rene
             menuStock = new frmMenuStock(panelContent, this);
             cargarFormularioPanel(menuStock);
         }
+
+        private void btnRemito_Click(object sender, EventArgs e)
+        {
+            menuRemitos = new frmMenuRemitos(panelContent, this);
+            cargarFormularioPanel(menuRemitos);
+        }
+
+
     }
 }

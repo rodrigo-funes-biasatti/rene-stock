@@ -66,6 +66,7 @@
             this.Controls.Add(this.pictureBoxLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoading";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoading";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();

@@ -14,6 +14,7 @@ namespace Prueba_Rene.Forms.Remitos
     {
         Panel panel_principal;
         frmMain principal;
+        frmGenerarRemito frmGenRem;
         public frmMenuRemitos(Panel panel, frmMain main)
         {
             InitializeComponent();
@@ -24,6 +25,21 @@ namespace Prueba_Rene.Forms.Remitos
         private void frmMenuRemitos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelGenerarRemito_Click(object sender, EventArgs e)
+        {
+            frmGenRem = new frmGenerarRemito(panel_principal, this);
+            cargarFormularioPanel(frmGenRem);
+        }
+
+        private void cargarFormularioPanel(Form frm)
+        {
+            this.Hide();
+            frm.TopLevel = false;
+            panel_principal.Controls.Clear();
+            panel_principal.Controls.Add(frm);
+            frm.Show();
         }
     }
 }

@@ -45,6 +45,7 @@
             this.panelGenerarRemito.Name = "panelGenerarRemito";
             this.panelGenerarRemito.Size = new System.Drawing.Size(203, 199);
             this.panelGenerarRemito.TabIndex = 1;
+            this.panelGenerarRemito.Click += new System.EventHandler(this.panelGenerarRemito_Click);
             // 
             // label1
             // 
