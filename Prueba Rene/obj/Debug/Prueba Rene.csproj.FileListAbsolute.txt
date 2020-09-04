@@ -1,7 +1,6 @@
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.exe.config
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.exe
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Prueba Rene.pdb
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csprojAssemblyReference.cache
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.frmMain.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Properties.Resources.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csproj.GenerateResource.cache
@@ -10,17 +9,6 @@ D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba R
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.pdb
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.frmLogin.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\MySql.Data.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Google.Protobuf.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Zstandard.Net.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\K4os.Compression.LZ4.Streams.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\BouncyCastle.Crypto.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Ubiety.Dns.Core.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Renci.SshNet.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\System.Buffers.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\K4os.Compression.LZ4.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\K4os.Hash.xxHash.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\System.Memory.dll
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\MySql.Data.xml
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.exe.config
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csproj.CopyComplete
@@ -123,4 +111,13 @@ D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\es\Micro
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\RdlCompile.cache
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\RdlCompile.compiled
-D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Remitos.frmReporteNuevoRemito.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\EntityFramework.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\EntityFramework.xml
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\MySql.Data.Entity.EF6.xml
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Remitos.frmReporteRemitos.resources
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csprojAssemblyReference.cache

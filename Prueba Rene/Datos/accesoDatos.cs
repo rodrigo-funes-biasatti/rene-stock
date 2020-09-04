@@ -668,9 +668,9 @@ namespace Prueba_Rene.Datos
             }
         }
 
-        public DataTable obtenerDatosReporteRemito(int codigo_rem)
+        public DataSet obtenerDatosReporteRemito(int codigo_rem)
         {
-            DataTable ret = new DataTable();
+            DataSet ret = new DataSet();
             using (var con = new MySqlConnection(cadena_conexion))
             {
                 con.Open();
@@ -690,6 +690,40 @@ namespace Prueba_Rene.Datos
                 finally
                 {
                     con.Close();
+                }
+            }
+            return ret;
+        }
+
+        public DataTable obtenerDatosRemitoReporte(int codigo_rem)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                using (var cmd = new MySqlCommand("obtenerRemitoReporte", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cod_rem", codigo_rem);
+
+                        da.SelectCommand = cmd;
+
+                        da.Fill(ret);
+
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
             }
             return ret;

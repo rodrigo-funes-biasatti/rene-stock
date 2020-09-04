@@ -207,11 +207,20 @@ namespace Prueba_Rene.Forms.Remitos
             {
                 remito_a_generar.Codigo_remito = Convert.ToInt32(txtNroRemito.Text);
                 remito_a_generar.Id_condicion_venta = Convert.ToInt32(cmbCondicionVenta.SelectedValue);
-                remito_a_generar.Factura_nro = Convert.ToInt32(txtNroFactura.Text);
+                try
+                {
+                    remito_a_generar.Factura_nro = Convert.ToInt32(txtNroFactura.Text);
+                    remito_a_generar.Codigo_barra = Convert.ToInt32(txtCodigoBarras.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 remito_a_generar.Fecha_remito = DateTime.Now;
-                remito_a_generar.Codigo_barra = Convert.ToInt32(txtCodigoBarras.Text);
                 remito_a_generar.Observaciones = rtxtObservaciones.Text;
-                remito_a_generar.Vendedor = cmbVendedor.SelectedText;
+                remito_a_generar.Vendedor = cmbVendedor.SelectedItem.ToString();
                 remito_a_generar.Total_remito = Convert.ToDouble(lblTotalRemito.Text);
 
                 foreach (DataGridViewRow fila in dataGridViewRemito.Rows)
@@ -248,13 +257,17 @@ namespace Prueba_Rene.Forms.Remitos
         private void backgroundWorkerGenerarRemito_DoWork(object sender, DoWorkEventArgs e)
         {
             ad.agregarRemito(remito_a_generar, items);
-            frmReporteNuevoRemito reporte = new frmReporteNuevoRemito(remito_a_generar.Codigo_remito);
-            reporte.Show();
         }
 
         private void backgroundWorkerGenerarRemito_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            frmReporteRemitos report = new frmReporteRemitos(remito_a_generar.Codigo_remito);
+            report.ShowDialog();
             loading.Close();
+            limpiarCampos();
+            dataGridViewRemito.Rows.Clear();
+            total_remito = 0;
+            lblTotalRemito.Text = "00.00";
         }
     }
 }

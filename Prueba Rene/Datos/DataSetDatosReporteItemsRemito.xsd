@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDatosReporteItemsRemito" targetNamespace="http://tempuri.org/DataSetDatosReporteItemsRemito.xsd" xmlns:mstns="http://tempuri.org/DataSetDatosReporteItemsRemito.xsd" xmlns="http://tempuri.org/DataSetDatosReporteItemsRemito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDatosReporteItemsRemito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetDatosReporteItemsRemito" msprop:Generator_UserDSName="DataSetDatosReporteItemsRemito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableDatosReporteItemsRemito" msprop:Generator_TableClassName="DataTableDatosReporteItemsRemitoDataTable" msprop:Generator_TableVarName="tableDataTableDatosReporteItemsRemito" msprop:Generator_TablePropName="DataTableDatosReporteItemsRemito" msprop:Generator_RowDeletingName="DataTableDatosReporteItemsRemitoRowDeleting" msprop:Generator_RowChangingName="DataTableDatosReporteItemsRemitoRowChanging" msprop:Generator_RowEvHandlerName="DataTableDatosReporteItemsRemitoRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableDatosReporteItemsRemitoRowDeleted" msprop:Generator_UserTableName="DataTableDatosReporteItemsRemito" msprop:Generator_RowChangedName="DataTableDatosReporteItemsRemitoRowChanged" msprop:Generator_RowEvArgName="DataTableDatosReporteItemsRemitoRowChangeEvent" msprop:Generator_RowClassName="DataTableDatosReporteItemsRemitoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_prod" msprop:Generator_ColumnVarNameInTable="columnid_prod" msprop:Generator_ColumnPropNameInRow="id_prod" msprop:Generator_ColumnPropNameInTable="id_prodColumn" msprop:Generator_UserColumnName="id_prod" type="xs:int" minOccurs="0" />
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="precio_unitario" msprop:Generator_ColumnVarNameInTable="columnprecio_unitario" msprop:Generator_ColumnPropNameInRow="precio_unitario" msprop:Generator_ColumnPropNameInTable="precio_unitarioColumn" msprop:Generator_UserColumnName="precio_unitario" type="xs:double" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
