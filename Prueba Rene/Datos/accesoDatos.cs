@@ -1,14 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Prueba_Rene.Clases;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using Prueba_Rene.Clases;
 
 namespace Prueba_Rene.Datos
 {
@@ -64,7 +58,7 @@ namespace Prueba_Rene.Datos
         public bool cambiarContraseña(string nuevaContraseña)
         {
             string contraseña_actual = obtenerContraseñaActual();
-            if (!this.guardarContraseñaAntigua(contraseña_actual))
+            if (!guardarContraseñaAntigua(contraseña_actual))
             {
                 return false;
             }
@@ -78,7 +72,7 @@ namespace Prueba_Rene.Datos
                     using (var cmd = new MySqlCommand(query, con))
                     {
                         int result = cmd.ExecuteNonQuery();
-                        if(result < 1)
+                        if (result < 1)
                         {
                             return false;
                         }
@@ -261,15 +255,15 @@ namespace Prueba_Rene.Datos
                             return true;
                         }
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         try
                         {
                             nuevoProd.Rollback();
                         }
-                        catch(MySqlException ex)
+                        catch (MySqlException ex)
                         {
-                            if(nuevoProd.Connection != null)
+                            if (nuevoProd.Connection != null)
                             {
                                 throw ex;
                             }
@@ -386,7 +380,7 @@ namespace Prueba_Rene.Datos
         {
             SStock s = new SStock();
             using (var con = new MySqlConnection(cadena_conexion))
-            {             
+            {
                 con.Open();
                 try
                 {
@@ -399,7 +393,7 @@ namespace Prueba_Rene.Datos
 
                         while (reader.Read())
                         {
-                            
+
                             s.Id_prod = Convert.ToInt32(reader["id_prod"]);
                             s.Ult_fecha_modif = Convert.ToDateTime(reader["ult_fecha_modif"]);
                             s.Cantidad_actual = Convert.ToDouble(reader["cantidad_actual"]);
@@ -435,7 +429,7 @@ namespace Prueba_Rene.Datos
 
                         int result = cmd.ExecuteNonQuery();
 
-                        if(result < 1)
+                        if (result < 1)
                         {
                             return false;
                         }
@@ -445,7 +439,7 @@ namespace Prueba_Rene.Datos
                         }
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
@@ -483,7 +477,7 @@ namespace Prueba_Rene.Datos
                         return dataGraphStocks;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
@@ -537,13 +531,13 @@ namespace Prueba_Rene.Datos
                         return condiciones;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
                 finally
                 {
-                    con.Close();             
+                    con.Close();
                 }
             }
         }
@@ -562,7 +556,7 @@ namespace Prueba_Rene.Datos
                         ret = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
@@ -575,7 +569,7 @@ namespace Prueba_Rene.Datos
             }
         }
 
-        public bool agregarRemito(Remito remito, List<Item_Remito> items)
+        public bool agregarRemito(Remito remito, List<Item_Remito> items, List<SStock> stock_actualizar)
         {
             MySqlTransaction agregarRemito;
             //MySqlTransaction agregarItems;
@@ -603,7 +597,7 @@ namespace Prueba_Rene.Datos
 
                         int result = cmdRemitos.ExecuteNonQuery();
 
-                        if(result < 1)
+                        if (result < 1)
                         {
                             return false;
                         }
@@ -617,7 +611,7 @@ namespace Prueba_Rene.Datos
 
                                 try
                                 {
-                                    foreach(Item_Remito i in items)
+                                    foreach (Item_Remito i in items)
                                     {
                                         cmdItems.Parameters.Clear();
                                         cmdItems.Parameters.AddWithValue("@codigo_rem", remito.Codigo_remito);
@@ -626,9 +620,21 @@ namespace Prueba_Rene.Datos
                                         cmdItems.Parameters.AddWithValue("@precio_unitario", i.Precio_unitario);
                                         cmdItems.Parameters.AddWithValue("@subtotal", i.Subtotal);
 
-                                        int result1 = cmdItems.ExecuteNonQuery();
+                                        int result1 = cmdItems.ExecuteNonQuery();                                   
 
-                                        if(result1 < 1)
+                                        if (result1 < 1)
+                                        {
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
+                                    }
+
+                                    foreach(SStock s in stock_actualizar)
+                                    {
+                                        if(!actulizarStock(s.Cantidad_actual, s.Id_prod))
                                         {
                                             return false;
                                         }
@@ -638,20 +644,20 @@ namespace Prueba_Rene.Datos
                                         }
                                     }
                                 }
-                                catch(Exception e)
+                                catch (Exception e)
                                 {
                                     throw e;
                                 }
                             }
                         }
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         try
                         {
                             agregarRemito.Rollback();
                         }
-                        catch(MySqlException ex)
+                        catch (MySqlException ex)
                         {
                             throw ex;
                         }
@@ -663,7 +669,7 @@ namespace Prueba_Rene.Datos
                         con.Close();
                     }
                 }
-                
+
                 return true;
             }
         }
@@ -683,7 +689,7 @@ namespace Prueba_Rene.Datos
                         da.Fill(ret);
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
@@ -727,6 +733,118 @@ namespace Prueba_Rene.Datos
                 }
             }
             return ret;
+        }
+
+        public DataTable obtenerDatosReporteItems(int codigo_rem)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                using (var cmd = new MySqlCommand("obtenerItemsRemitoReporte", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cod_rem", codigo_rem);
+
+                        da.SelectCommand = cmd;
+
+                        da.Fill(ret);
+
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            return ret;
+        }
+
+        public DataTable obtenerRemitosxFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            DataTable ret = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "SELECT codigo_rem, factura_nro, fecha_remito, total_remito, vendedor FROM Remitos WHERE fecha_remito BETWEEN @fechaDesde AND @fechaHasta";
+
+                try
+                {
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@fechaDesde", fechaDesde);
+                        cmd.Parameters.AddWithValue("@fechaHasta", fechaHasta);
+
+                        da.SelectCommand = cmd;
+
+                        da.Fill(ret);
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+            return ret;
+        }
+
+        public bool editarNroFacturaRemito(int cod_rem, int nro_fac)
+        {
+            int result;
+
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "UPDATE Remitos SET factura_nro=@nro_fac WHERE codigo_rem=@cod_rem";
+
+                try
+                {
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@nro_fac", nro_fac);
+                        cmd.Parameters.AddWithValue("@cod_rem", cod_rem);
+
+                        result = cmd.ExecuteNonQuery();
+
+                        if(result < 1)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

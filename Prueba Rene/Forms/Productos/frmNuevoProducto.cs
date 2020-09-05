@@ -3,11 +3,6 @@ using Prueba_Rene.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Productos
@@ -38,7 +33,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -129,11 +124,11 @@ namespace Prueba_Rene.Forms.Productos
             {
                 MessageBox.Show("Hubo un error al agregar el Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void backgroundWorkerAgregarProducto_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {         
+        {
             limpiarCampos();
             loading.Close();
         }

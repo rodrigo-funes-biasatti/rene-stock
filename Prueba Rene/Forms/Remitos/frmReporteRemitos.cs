@@ -1,13 +1,7 @@
 ﻿using Microsoft.Reporting.WinForms;
 using Prueba_Rene.Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Remitos
@@ -17,6 +11,7 @@ namespace Prueba_Rene.Forms.Remitos
         DataTable remito;
         accesoDatos ad;
         int codigo_rem;
+        DataTable items;
         public frmReporteRemitos(int cod_rem)
         {
             InitializeComponent();
@@ -27,14 +22,14 @@ namespace Prueba_Rene.Forms.Remitos
         private void frmReporteRemitos_Load(object sender, EventArgs e)
         {
             remito = ad.obtenerDatosRemitoReporte(codigo_rem);
-            DataTable items = new DataTable();
+            items = ad.obtenerDatosReporteItems(codigo_rem);
             ReportDataSource rdsRemito = new ReportDataSource("DataSetReporteRemitos", remito);
             ReportDataSource rdsItems = new ReportDataSource("DataSetReporteItem", items);
 
             reportViewerNuevoRemito.LocalReport.DataSources.Clear();
             reportViewerNuevoRemito.LocalReport.DataSources.Add(rdsRemito);
             reportViewerNuevoRemito.LocalReport.DataSources.Add(rdsItems);
-            this.reportViewerNuevoRemito.RefreshReport();
+            reportViewerNuevoRemito.RefreshReport();
         }
     }
 }

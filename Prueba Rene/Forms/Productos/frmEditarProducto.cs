@@ -4,10 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Productos
@@ -70,7 +66,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frm_anterior);
             frm_anterior.Show();
             GC.Collect();
@@ -112,7 +108,7 @@ namespace Prueba_Rene.Forms.Productos
             txtNombre.Text = prod_seleccionado.Nombre;
             mtxtPrecioUnitario.Text = prod_seleccionado.Precio_unitario.ToString();
             rtxtDescripcion.Text = prod_seleccionado.Descripcion;
-            cmbRubros.SelectedValue = prod_seleccionado.Id_rubro;    
+            cmbRubros.SelectedValue = prod_seleccionado.Id_rubro;
 
         }
 
@@ -143,7 +139,7 @@ namespace Prueba_Rene.Forms.Productos
             mtxtPrecioUnitario.Text = "";
             rtxtDescripcion.Text = "";
             cmbRubros.SelectedIndex = -1;
-            if(dataGridViewProductos.CurrentCell == null)
+            if (dataGridViewProductos.CurrentCell == null)
             {
                 return;
             }
@@ -169,7 +165,7 @@ namespace Prueba_Rene.Forms.Productos
             loading.Show();
 
             backgroundWorkerEditarProducto.RunWorkerAsync();
-            
+
         }
 
         private void backgroundWorkerEditarProducto_DoWork(object sender, DoWorkEventArgs e)
@@ -194,7 +190,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private void pictureBoxBack_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frm_anterior);
             frm_anterior.Show();
             GC.Collect();

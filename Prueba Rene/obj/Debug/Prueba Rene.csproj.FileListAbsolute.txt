@@ -121,3 +121,4 @@ D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Oracle.M
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Remitos.frmReporteRemitos.resources
 D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba Rene.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\obj\Debug\Prueba_Rene.Forms.Remitos.frmHistorialRemitos.resources

@@ -1,14 +1,10 @@
-﻿using Prueba_Rene.Datos;
+﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prueba_Rene.Clases;
 
 namespace Prueba_Rene.Forms.Stock
 {
@@ -37,7 +33,7 @@ namespace Prueba_Rene.Forms.Stock
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -106,7 +102,7 @@ namespace Prueba_Rene.Forms.Stock
 
         private void frmConsultarStock_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void backgroundWorkerCargarStock_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

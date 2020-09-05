@@ -123,6 +123,16 @@ namespace Prueba_Rene.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history_solid {
+            get {
+                object obj = ResourceManager.GetObject("history-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap layer_group_solid {
             get {
                 object obj = ResourceManager.GetObject("layer-group-solid", resourceCulture);

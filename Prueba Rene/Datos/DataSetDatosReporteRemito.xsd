@@ -21,6 +21,8 @@
               <xs:element name="cod_barra" msprop:Generator_ColumnVarNameInTable="columncod_barra" msprop:Generator_ColumnPropNameInRow="cod_barra" msprop:Generator_ColumnPropNameInTable="cod_barraColumn" msprop:Generator_UserColumnName="cod_barra" type="xs:int" minOccurs="0" />
               <xs:element name="vendedor" msprop:Generator_ColumnVarNameInTable="columnvendedor" msprop:Generator_ColumnPropNameInRow="vendedor" msprop:Generator_ColumnPropNameInTable="vendedorColumn" msprop:Generator_UserColumnName="vendedor" type="xs:string" minOccurs="0" />
               <xs:element name="total_remito" msprop:Generator_ColumnVarNameInTable="columntotal_remito" msprop:Generator_ColumnPropNameInRow="total_remito" msprop:Generator_ColumnPropNameInTable="total_remitoColumn" msprop:Generator_UserColumnName="total_remito" type="xs:double" minOccurs="0" />
+              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="factura_nro" msprop:Generator_ColumnVarNameInTable="columnfactura_nro" msprop:Generator_ColumnPropNameInRow="factura_nro" msprop:Generator_ColumnPropNameInTable="factura_nroColumn" msprop:Generator_UserColumnName="factura_nro" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

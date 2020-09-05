@@ -74,22 +74,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -126,6 +115,12 @@
     </Compile>
     <Compile Include="Forms\Remitos\frmGenerarRemito.Designer.cs">
       <DependentUpon>frmGenerarRemito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmHistorialRemitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmHistorialRemitos.Designer.cs">
+      <DependentUpon>frmHistorialRemitos.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Remitos\frmMenuRemitos.cs">
       <SubType>Form</SubType>
@@ -224,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Remitos\frmGenerarRemito.resx">
       <DependentUpon>frmGenerarRemito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmHistorialRemitos.resx">
+      <DependentUpon>frmHistorialRemitos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Remitos\frmMenuRemitos.resx">
       <DependentUpon>frmMenuRemitos.cs</DependentUpon>
@@ -338,6 +336,7 @@
     <Content Include="loco.ico" />
     <None Include="Resources\chart-bar-solid.png" />
     <None Include="Resources\file-alt-solid.png" />
+    <None Include="Resources\history-solid.png" />
     <Content Include="Resources\loco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

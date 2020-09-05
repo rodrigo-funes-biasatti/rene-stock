@@ -1,15 +1,11 @@
-﻿using System;
+﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Datos;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prueba_Rene.Clases;
-using Prueba_Rene.Datos;
 
 namespace Prueba_Rene.Forms.Productos
 {
@@ -29,7 +25,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private async void frmListaProductos_Load(object sender, EventArgs e)
         {
-            frmLoading loading = new frmLoading();          
+            frmLoading loading = new frmLoading();
             Task<DataTable> tarea = new Task<DataTable>(cargarTabla);
 
             tarea.Start();
@@ -49,7 +45,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -60,9 +56,9 @@ namespace Prueba_Rene.Forms.Productos
             DataGridViewColumn columna = dataGridViewProductos.Columns["id_rubro"];
             columna.ValueType = typeof(String);
 
-            foreach(DataGridViewRow fila in dataGridViewProductos.Rows)
+            foreach (DataGridViewRow fila in dataGridViewProductos.Rows)
             {
-                foreach(Rubro r in rubros)
+                foreach (Rubro r in rubros)
                 {
                     if (r.Id_rubro.Equals(fila.Cells["id_rubro"].Value))
                     {

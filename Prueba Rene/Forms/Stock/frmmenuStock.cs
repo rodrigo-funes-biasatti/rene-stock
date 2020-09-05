@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Stock
@@ -19,12 +12,12 @@ namespace Prueba_Rene.Forms.Stock
         {
             InitializeComponent();
             panel_principal = panel;
-            principal = main;         
+            principal = main;
         }
 
         private void cargarFormularioPanel(Form frm)
         {
-            this.Hide();
+            Hide();
             frm.TopLevel = false;
             panel_principal.Controls.Clear();
             panel_principal.Controls.Add(frm);

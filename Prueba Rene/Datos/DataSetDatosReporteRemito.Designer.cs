@@ -291,6 +291,10 @@ namespace Prueba_Rene.Datos {
             
             private global::System.Data.DataColumn columntotal_remito;
             
+            private global::System.Data.DataColumn columnobservaciones;
+            
+            private global::System.Data.DataColumn columnfactura_nro;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DatosReporteRemitoDataTable() {
@@ -374,6 +378,22 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn observacionesColumn {
+                get {
+                    return this.columnobservaciones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn factura_nroColumn {
+                get {
+                    return this.columnfactura_nro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +429,7 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DatosReporteRemitoRow AddDatosReporteRemitoRow(int codigo_rem, System.DateTime fecha_remito, string condicion_venta, int cod_barra, string vendedor, double total_remito) {
+            public DatosReporteRemitoRow AddDatosReporteRemitoRow(int codigo_rem, System.DateTime fecha_remito, string condicion_venta, int cod_barra, string vendedor, double total_remito, string observaciones, string factura_nro) {
                 DatosReporteRemitoRow rowDatosReporteRemitoRow = ((DatosReporteRemitoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo_rem,
@@ -417,7 +437,9 @@ namespace Prueba_Rene.Datos {
                         condicion_venta,
                         cod_barra,
                         vendedor,
-                        total_remito};
+                        total_remito,
+                        observaciones,
+                        factura_nro};
                 rowDatosReporteRemitoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDatosReporteRemitoRow);
                 return rowDatosReporteRemitoRow;
@@ -446,6 +468,8 @@ namespace Prueba_Rene.Datos {
                 this.columncod_barra = base.Columns["cod_barra"];
                 this.columnvendedor = base.Columns["vendedor"];
                 this.columntotal_remito = base.Columns["total_remito"];
+                this.columnobservaciones = base.Columns["observaciones"];
+                this.columnfactura_nro = base.Columns["factura_nro"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +487,10 @@ namespace Prueba_Rene.Datos {
                 base.Columns.Add(this.columnvendedor);
                 this.columntotal_remito = new global::System.Data.DataColumn("total_remito", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal_remito);
+                this.columnobservaciones = new global::System.Data.DataColumn("observaciones", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnobservaciones);
+                this.columnfactura_nro = new global::System.Data.DataColumn("factura_nro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfactura_nro);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -704,6 +732,39 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string observaciones {
+                get {
+                    try {
+                        return ((string)(this[this.tableDatosReporteRemito.observacionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'observaciones\' de la tabla \'DatosReporteRemito\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosReporteRemito.observacionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string factura_nro {
+                get {
+                    try {
+                        return ((string)(this[this.tableDatosReporteRemito.factura_nroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'factura_nro\' de la tabla \'DatosReporteRemito\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosReporteRemito.factura_nroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscodigo_remNull() {
                 return this.IsNull(this.tableDatosReporteRemito.codigo_remColumn);
             }
@@ -772,6 +833,30 @@ namespace Prueba_Rene.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settotal_remitoNull() {
                 this[this.tableDatosReporteRemito.total_remitoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsobservacionesNull() {
+                return this.IsNull(this.tableDatosReporteRemito.observacionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetobservacionesNull() {
+                this[this.tableDatosReporteRemito.observacionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isfactura_nroNull() {
+                return this.IsNull(this.tableDatosReporteRemito.factura_nroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setfactura_nroNull() {
+                this[this.tableDatosReporteRemito.factura_nroColumn] = global::System.Convert.DBNull;
             }
         }
         

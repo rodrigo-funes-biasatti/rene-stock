@@ -1,14 +1,10 @@
-﻿using System;
+﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prueba_Rene.Datos;
-using Prueba_Rene.Clases;
 
 namespace Prueba_Rene.Forms.Stock
 {
@@ -34,7 +30,7 @@ namespace Prueba_Rene.Forms.Stock
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -64,7 +60,7 @@ namespace Prueba_Rene.Forms.Stock
         private void backgroundWorkerCargarGrafico_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             chartStock.Series.Clear();
-            foreach(var dgs in dataGraphStocks)
+            foreach (var dgs in dataGraphStocks)
             {
                 chartStock.Series.Add(dgs.Nombre_prod);
                 chartStock.Series[dgs.Nombre_prod].Points.AddXY(dgs.Nombre_prod, dgs.Stock_actual);
@@ -74,15 +70,15 @@ namespace Prueba_Rene.Forms.Stock
                 //    case > 10: 
                 //}
 
-                if(dgs.Stock_actual < 10)
+                if (dgs.Stock_actual < 10)
                 {
                     chartStock.Series[dgs.Nombre_prod].Color = Color.FromArgb(208, 0, 0);
                 }
-                if(dgs.Stock_actual >= 10 && dgs.Stock_actual < 30)
+                if (dgs.Stock_actual >= 10 && dgs.Stock_actual < 30)
                 {
                     chartStock.Series[dgs.Nombre_prod].Color = Color.FromArgb(255, 224, 0);
                 }
-                if(dgs.Stock_actual >= 30)
+                if (dgs.Stock_actual >= 30)
                 {
                     chartStock.Series[dgs.Nombre_prod].Color = Color.FromArgb(0, 207, 0);
                 }

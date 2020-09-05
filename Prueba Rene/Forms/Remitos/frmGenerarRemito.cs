@@ -1,17 +1,11 @@
-﻿using System;
+﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
-using Prueba_Rene.Datos;
-using Prueba_Rene.Clases;
-using System.Runtime.InteropServices;
-using System.Windows.Forms.VisualStyles;
-using Prueba_Rene.Forms.Remitos;
 
 namespace Prueba_Rene.Forms.Remitos
 {
@@ -27,17 +21,19 @@ namespace Prueba_Rene.Forms.Remitos
         double total_remito;
         Remito remito_a_generar;
         List<Item_Remito> items;
+        List<SStock> stock_actualizar;
         public frmGenerarRemito(Panel principal, frmMenuRemitos abm)
         {
             InitializeComponent();
             panel_principal = principal;
             frmAnterior = abm;
             ad = new accesoDatos();
+
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -52,7 +48,7 @@ namespace Prueba_Rene.Forms.Remitos
             loading.Show();
             backgroundWorker1CargarTablaProductos.RunWorkerAsync();
             total_remito = 0;
-            
+
         }
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -80,7 +76,7 @@ namespace Prueba_Rene.Forms.Remitos
         private void backgroundWorker1CargarTablaProductos_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             dataGridViewProductos.DataSource = tabla_productos;
-            txtNroRemito.Text = (ad.obtenerNroRemito()+1).ToString();
+            txtNroRemito.Text = (ad.obtenerNroRemito() + 1).ToString();
             backgroundWorkerCargarComboCondiciones.RunWorkerAsync();
         }
 
@@ -91,7 +87,7 @@ namespace Prueba_Rene.Forms.Remitos
 
         private void dataGridViewProductos_Sorted(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtFiltroMarca_TextChanged(object sender, EventArgs e)
@@ -114,7 +110,7 @@ namespace Prueba_Rene.Forms.Remitos
             cmbCondicionVenta.ValueMember = "id_condicion_venta";
             cmbCondicionVenta.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCondicionVenta.SelectedIndex = -1;
-            
+
             loading.Close();
         }
 
@@ -135,13 +131,13 @@ namespace Prueba_Rene.Forms.Remitos
             try
             {
                 cantidad = Convert.ToInt32(txtCantidad.Text);
-                if(cantidad > stock)
+                if (cantidad > stock)
                 {
                     MessageBox.Show("No hay Stock suficiente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -168,10 +164,10 @@ namespace Prueba_Rene.Forms.Remitos
                 MessageBox.Show("Seleccione algun producto antes de agregarlo", "Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
-            if(MessageBox.Show("¿Seguro que desea borrar el item del remito?", "Quitar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (MessageBox.Show("¿Seguro que desea borrar el item del remito?", "Quitar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                
+
                 double subtotal = Convert.ToDouble(dataGridViewRemito.Rows[dataGridViewRemito.CurrentCell.RowIndex].Cells[5].Value);
                 DataGridViewRow fila = dataGridViewRemito.Rows[dataGridViewRemito.CurrentCell.RowIndex];
 
@@ -188,7 +184,7 @@ namespace Prueba_Rene.Forms.Remitos
                         break;
                     }
                 }
-                
+
                 dataGridViewRemito.Rows.Remove(fila);
                 actualizarTotalRemito(-subtotal);
             }
@@ -196,13 +192,15 @@ namespace Prueba_Rene.Forms.Remitos
             {
                 return;
             }
-            
+
         }
 
         private void btnGenerarRemito_Click(object sender, EventArgs e)
         {
             remito_a_generar = new Remito();
-            items = new List<Item_Remito>(); 
+            items = new List<Item_Remito>();
+            stock_actualizar = new List<SStock>();
+
             if (MessageBox.Show("Está seguro que desea generar el Remito con estos Items?", "Generar Remito", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 remito_a_generar.Codigo_remito = Convert.ToInt32(txtNroRemito.Text);
@@ -235,6 +233,21 @@ namespace Prueba_Rene.Forms.Remitos
                     };
 
                     items.Add(i);
+
+                    foreach (DataGridViewRow filaProd in dataGridViewProductos.Rows)
+                    {
+                        if (filaProd.Cells[0].Value.Equals(fila.Cells[0].Value))
+                        {
+                            SStock s = new SStock()
+                            {
+                                Id_prod = Convert.ToInt32(filaProd.Cells[0].Value),
+                                Cantidad_actual = Convert.ToDouble(filaProd.Cells[4].Value)
+                            };
+
+                            stock_actualizar.Add(s);
+                        }
+                    }
+
                 }
 
                 try
@@ -256,7 +269,7 @@ namespace Prueba_Rene.Forms.Remitos
 
         private void backgroundWorkerGenerarRemito_DoWork(object sender, DoWorkEventArgs e)
         {
-            ad.agregarRemito(remito_a_generar, items);
+            ad.agregarRemito(remito_a_generar, items, stock_actualizar);
         }
 
         private void backgroundWorkerGenerarRemito_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

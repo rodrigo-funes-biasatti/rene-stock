@@ -1,11 +1,5 @@
 ﻿using Prueba_Rene.Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +8,7 @@ namespace Prueba_Rene.Forms.ABM
     public partial class frmABMContraseña : Form
     {
         accesoDatos ad;
-        
+
         public frmABMContraseña()
         {
             InitializeComponent();
@@ -38,12 +32,12 @@ namespace Prueba_Rene.Forms.ABM
         }
 
         public void cambiarContraseña() //Creo una funcion con retorno Task<bool> para poder llamarla de forma asíncrona después
-        { 
+        {
             string nuevaContraseña = txtNuevaContraseña.Text;
             string viejaContraseña = txtAnteriorContraseña.Text;
             string contraseñaActual = ad.obtenerContraseñaActual();
 
-            if(nuevaContraseña.Equals("") || viejaContraseña.Equals(""))
+            if (nuevaContraseña.Equals("") || viejaContraseña.Equals(""))
             {
                 MessageBox.Show("Faltan datos a completar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

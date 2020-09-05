@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Remitos
@@ -15,6 +8,7 @@ namespace Prueba_Rene.Forms.Remitos
         Panel panel_principal;
         frmMain principal;
         frmGenerarRemito frmGenRem;
+        frmHistorialRemitos frmHistRem;
         public frmMenuRemitos(Panel panel, frmMain main)
         {
             InitializeComponent();
@@ -35,11 +29,17 @@ namespace Prueba_Rene.Forms.Remitos
 
         private void cargarFormularioPanel(Form frm)
         {
-            this.Hide();
+            Hide();
             frm.TopLevel = false;
             panel_principal.Controls.Clear();
             panel_principal.Controls.Add(frm);
             frm.Show();
+        }
+
+        private void panelHistorialRemitos_Click(object sender, EventArgs e)
+        {
+            frmHistRem = new frmHistorialRemitos(panel_principal, this);
+            cargarFormularioPanel(frmHistRem);
         }
     }
 }

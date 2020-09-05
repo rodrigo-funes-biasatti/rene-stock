@@ -4,9 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,7 +39,7 @@ namespace Prueba_Rene.Forms.Rubros
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
             panel_principal.Controls.Add(frmAnterior);
             frmAnterior.Show();
             GC.Collect();
@@ -68,7 +65,7 @@ namespace Prueba_Rene.Forms.Rubros
 
         private void dataGridViewRubros_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridViewRubros.CurrentCell == null)
+            if (dataGridViewRubros.CurrentCell == null)
             {
                 return;
             }
@@ -92,7 +89,7 @@ namespace Prueba_Rene.Forms.Rubros
 
         private async void btnBorrar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewRubros.CurrentCell == null)
+            if (dataGridViewRubros.CurrentCell == null)
             {
                 MessageBox.Show("No hay elementos seleccionados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -133,21 +130,21 @@ namespace Prueba_Rene.Forms.Rubros
 
         private bool borrarRubro()
         {
-            return ad.borrarRubro(rubro_seleccionado);                       
+            return ad.borrarRubro(rubro_seleccionado);
         }
 
         private async void btnEditar_Click(object sender, EventArgs e)
         {
             loading = new frmLoading();
 
-            if(txtNombreEditar.Text.Equals("") || txtDescripcionEditar.Text.Equals(""))
+            if (txtNombreEditar.Text.Equals("") || txtDescripcionEditar.Text.Equals(""))
             {
                 MessageBox.Show("Faltan datos a completar.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             Task<bool> tarea1 = new Task<bool>(editarRubro);
-            
+
             loading.Show();
             tarea1.Start();
 
@@ -197,7 +194,7 @@ namespace Prueba_Rene.Forms.Rubros
             tareaAgregar.Start();
             loading.Show();
 
-            bool ret = await tareaAgregar;          
+            bool ret = await tareaAgregar;
 
             if (ret)
             {

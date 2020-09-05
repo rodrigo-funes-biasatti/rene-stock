@@ -1,12 +1,5 @@
 ﻿using Prueba_Rene.Forms.Rubros;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene.Forms.Productos
@@ -47,7 +40,7 @@ namespace Prueba_Rene.Forms.Productos
 
         private void cargarFormularioPanel(Form frm)
         {
-            this.Hide();
+            Hide();
             frm.TopLevel = false;
             panel_principal.Controls.Clear();
             panel_principal.Controls.Add(frm);

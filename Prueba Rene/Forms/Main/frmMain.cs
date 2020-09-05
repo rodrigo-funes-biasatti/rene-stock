@@ -4,12 +4,6 @@ using Prueba_Rene.Forms.Remitos;
 using Prueba_Rene.Forms.Stock;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prueba_Rene
@@ -72,7 +66,7 @@ namespace Prueba_Rene
         private void frmMain_Load(object sender, EventArgs e)
         {
             t.Interval = 1000;
-            t.Tick += new EventHandler(this.clock1_Tick);
+            t.Tick += new EventHandler(clock1_Tick);
 
             t.Start();
 
@@ -82,7 +76,7 @@ namespace Prueba_Rene
         private void habilitarPanelesConfig(bool op)
         {
             panelConfig.Controls.Add(btnCambiarContraseña);
-            this.panelConfig.Visible = op;
+            panelConfig.Visible = op;
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
@@ -111,7 +105,7 @@ namespace Prueba_Rene
         }
 
         public void limpiarPanelPrincipal()
-        { 
+        {
             foreach (IDisposable control in panelContent.Controls)
             {
                 control.Dispose();
@@ -147,7 +141,7 @@ namespace Prueba_Rene
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
-        {   
+        {
             abmprod = new frmABMProductos(panelContent, this);
             cargarFormularioPanel(abmprod);
         }
