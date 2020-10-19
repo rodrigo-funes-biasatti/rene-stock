@@ -10,7 +10,7 @@ namespace Prueba_Rene.Datos
 {
     class accesoDatos
     {
-        string cadena_conexion = "server=45.80.152.253;user id=hs;password=cacaca12;database=BD_DZ";
+        string cadena_conexion = "server=45.80.152.253;user id=hs;password=cacaca12;database=test_rene";
 
         public bool validarContraseña(string contraseña)
         {

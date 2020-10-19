@@ -204,6 +204,11 @@ namespace Prueba_Rene.Forms.Remitos
 
             if (MessageBox.Show("Está seguro que desea generar el Remito con estos Items?", "Generar Remito", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (txtNegocio.Text.Equals(""))
+                {
+                    MessageBox.Show("El campo NEGOCIO está vacío.", "Negocio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 remito_a_generar.Codigo_remito = Convert.ToInt32(txtNroRemito.Text);
                 remito_a_generar.Id_condicion_venta = Convert.ToInt32(cmbCondicionVenta.SelectedValue);
                 try
