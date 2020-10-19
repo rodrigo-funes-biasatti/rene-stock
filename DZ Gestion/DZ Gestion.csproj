@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57251FF4-5565-43E6-98D3-59229640F67D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Prueba_Rene</RootNamespace>
+    <AssemblyName>DZ Gestion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>loco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.9\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.9\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.8.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.19.7.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Condicion_Venta.cs" />
+    <Compile Include="Clases\DataGraphStock.cs" />
+    <Compile Include="Clases\DatosRecaudacion.cs" />
+    <Compile Include="Clases\Item_Remito.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Remito.cs" />
+    <Compile Include="Clases\Rubro.cs" />
+    <Compile Include="Clases\SStock.cs" />
+    <Compile Include="Datos\accesoDatos.cs" />
+    <Compile Include="Datos\DataSetDatosReporteItemsRemito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataSetDatosReporteRemito.cs">
+      <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataSetDatosReporteRemito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contraseñas\frmABMContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contraseñas\frmABMContraseña.Designer.cs">
+      <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmGenerarRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmGenerarRemito.Designer.cs">
+      <DependentUpon>frmGenerarRemito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmHistorialRemitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmHistorialRemitos.Designer.cs">
+      <DependentUpon>frmHistorialRemitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmMenuRemitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmMenuRemitos.Designer.cs">
+      <DependentUpon>frmMenuRemitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmRecaudacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmRecaudacion.Designer.cs">
+      <DependentUpon>frmRecaudacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmReporteRemitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmReporteRemitos.Designer.cs">
+      <DependentUpon>frmReporteRemitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Resources\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Resources\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Forms\Main\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmABMProductos.Designer.cs">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEditarProducto.Designer.cs">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmEliminarProducto.Designer.cs">
+      <DependentUpon>frmEliminarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmListaProductos.Designer.cs">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\frmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\frmNuevoProducto.Designer.cs">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rubros\frmRubros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rubros\frmRubros.Designer.cs">
+      <DependentUpon>frmRubros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmConsultarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmConsultarStock.Designer.cs">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmEditarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmEditarStock.Designer.cs">
+      <DependentUpon>frmEditarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmGraficos.Designer.cs">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmmenuStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmmenuStock.Designer.cs">
+      <DependentUpon>frmmenuStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
+      <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmGenerarRemito.resx">
+      <DependentUpon>frmGenerarRemito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmHistorialRemitos.resx">
+      <DependentUpon>frmHistorialRemitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmMenuRemitos.resx">
+      <DependentUpon>frmMenuRemitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmRecaudacion.resx">
+      <DependentUpon>frmRecaudacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmReporteRemitos.resx">
+      <DependentUpon>frmReporteRemitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\Informes\ReportNuevoRemito.rdlc" />
+    <EmbeddedResource Include="Forms\Resources\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmABMProductos.resx">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmEditarProducto.resx">
+      <DependentUpon>frmEditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmEliminarProducto.resx">
+      <DependentUpon>frmEliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\frmNuevoProducto.resx">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rubros\frmRubros.resx">
+      <DependentUpon>frmRubros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmConsultarStock.aa-ER.resx">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmConsultarStock.resx">
+      <DependentUpon>frmConsultarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmEditarStock.resx">
+      <DependentUpon>frmEditarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmGraficos.resx">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmmenuStock.resx">
+      <DependentUpon>frmmenuStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Datos\DataSetDatosReporteItemsRemito.xsc">
+      <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetDatosReporteItemsRemito.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDatosReporteItemsRemito.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetDatosReporteItemsRemito.xss">
+      <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetDatosReporteRemito.xsc">
+      <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetDatosReporteRemito.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDatosReporteRemito.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetDatosReporteRemito.xss">
+      <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Prueba_Rene.Clases.Item_Remito.datasource" />
+    <None Include="Properties\DataSources\Prueba_Rene.Clases.Remito.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\long-arrow-alt-left-solid.png" />
+    <None Include="Resources\trash-alt-regular.png" />
+    <None Include="Resources\plus-square-regular.png" />
+    <None Include="Resources\cog-solid_white.png" />
+    <None Include="Resources\cog-solid.png" />
+    <None Include="Resources\Gear-0.2s-200px.gif" />
+    <None Include="Resources\edit-regular.png" />
+    <None Include="Resources\list-alt-regular.png" />
+    <None Include="Resources\layer-group-solid.png" />
+    <Content Include="loco.ico" />
+    <None Include="Resources\chart-bar-solid.png" />
+    <None Include="Resources\file-alt-solid.png" />
+    <None Include="Resources\history-solid.png" />
+    <None Include="Resources\hand-holding-usd-solid.png" />
+    <Content Include="Resources\loco.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

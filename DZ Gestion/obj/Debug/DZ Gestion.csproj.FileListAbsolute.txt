@@ -1,0 +1,125 @@
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EntityFramework.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\MySql.Data.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EnvDTE.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\stdole.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EnvDTE80.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.Build.Tasks.Core.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\VSLangProj.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\VSLangProj80.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Newtonsoft.Json.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.MSXML.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.Build.Utilities.Core.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.Build.Framework.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\VSLangProj2.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EntityFramework.xml
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\MySql.Data.xml
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\MySql.Data.Entity.EF6.xml
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.ABM.frmABMContraseña.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmGenerarRemito.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmHistorialRemitos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmMenuRemitos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmRecaudacion.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmReporteRemitos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.frmLoading.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.frmMain.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.frmLogin.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmABMProductos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmEditarProducto.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmEliminarProducto.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmListaProductos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmNuevoProducto.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Rubros.frmRubros.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmEditarStock.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmGraficos.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmMenuStock.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Properties.Resources.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.aa-ER.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.csproj.GenerateResource.cache
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\RdlCompile.cache
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\RdlCompile.compiled
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.csproj.CopyComplete
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.exe.config
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\DZ Gestion.exe.config
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\DZ Gestion.exe
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\DZ Gestion.pdb
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\bin\Debug\aa-ER\DZ Gestion.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\aa-ER\DZ Gestion.resources.dll
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.exe
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.pdb
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.csprojAssemblyReference.cache
