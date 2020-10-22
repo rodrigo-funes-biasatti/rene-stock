@@ -6,16 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.48772cm</Width>
+              <Width>2.33965cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.72937cm</Width>
+              <Width>2.51229cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.36972cm</Width>
+              <Width>3.68467cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.135cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.05021cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -38,7 +41,7 @@
                               <Style>
                                 <FontFamily>Microsoft JhengHei UI Light</FontFamily>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -74,7 +77,7 @@
                               <Style>
                                 <FontFamily>Microsoft JhengHei UI Light</FontFamily>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -110,7 +113,7 @@
                               <Style>
                                 <FontFamily>Microsoft JhengHei UI Light</FontFamily>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -146,7 +149,7 @@
                               <Style>
                                 <FontFamily>Microsoft JhengHei UI Light</FontFamily>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -156,6 +159,42 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Cantidad</Value>
+                              <Style>
+                                <FontFamily>Microsoft JhengHei UI Light</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>Maroon</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -182,12 +221,12 @@
                               <Style>
                                 <FontFamily>Microsoft JhengHei UI Light</FontFamily>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -221,7 +260,7 @@
                             <TextRun>
                               <Value>=Fields!id_prod.Value</Value>
                               <Style>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -255,7 +294,7 @@
                             <TextRun>
                               <Value>=Fields!marca.Value</Value>
                               <Style>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -289,7 +328,7 @@
                             <TextRun>
                               <Value>=Fields!nombre.Value</Value>
                               <Style>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -323,7 +362,7 @@
                             <TextRun>
                               <Value>=Fields!precio_unitario.Value</Value>
                               <Style>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -348,6 +387,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="cantidad">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!cantidad.Value</Value>
+                              <Style>
+                                <Color>Maroon</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>cantidad</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="subtotal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -357,12 +430,12 @@
                             <TextRun>
                               <Value>=Fields!subtotal.Value</Value>
                               <Style>
-                                <Color>White</Color>
+                                <Color>Maroon</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -391,6 +464,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -410,14 +484,13 @@
         <Width>16.22181cm</Width>
         <Style>
           <Border>
-            <Color>White</Color>
+            <Color>Maroon</Color>
             <Style>None</Style>
           </Border>
-          <BackgroundColor>DarkRed</BackgroundColor>
+          <BackgroundColor>White</BackgroundColor>
           <FontFamily>Microsoft JhengHei UI Light</FontFamily>
           <FontWeight>Bold</FontWeight>
           <TextAlign>Center</TextAlign>
-          <Color>White</Color>
         </Style>
       </Tablix>
     </ReportItems>
@@ -487,7 +560,7 @@
           <Top>0.62287cm</Top>
           <Left>2.85814cm</Left>
           <Height>1.28833cm</Height>
-          <Width>8.09909cm</Width>
+          <Width>7.75513cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -525,7 +598,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.62287cm</Top>
-          <Left>11.13362cm</Left>
+          <Left>10.75438cm</Left>
           <Height>0.6cm</Height>
           <Width>5.45861cm</Width>
           <ZIndex>3</ZIndex>
@@ -565,7 +638,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.32871cm</Top>
-          <Left>11.1689cm</Left>
+          <Left>10.78966cm</Left>
           <Height>0.5825cm</Height>
           <Width>5.42333cm</Width>
           <ZIndex>4</ZIndex>
@@ -917,10 +990,14 @@
           <DataField>subtotal</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
+        <Field Name="cantidad">
+          <DataField>cantidad</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetDatosReporteItemsRemito</rd:DataSetName>
-        <rd:SchemaPath>D:\OneDrive\Documentos\Proyectos .NET\Prueba Rene\Prueba Rene\Datos\DataSetDatosReporteItemsRemito.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\Datos\DataSetDatosReporteItemsRemito.xsd</rd:SchemaPath>
         <rd:TableName>DataTableDatosReporteItemsRemito</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

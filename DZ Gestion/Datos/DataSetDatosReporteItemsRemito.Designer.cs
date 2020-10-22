@@ -289,6 +289,8 @@ namespace Prueba_Rene.Datos {
             
             private global::System.Data.DataColumn columnsubtotal;
             
+            private global::System.Data.DataColumn columncantidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DataTableDatosReporteItemsRemitoDataTable() {
@@ -364,6 +366,14 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn cantidadColumn {
+                get {
+                    return this.columncantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +409,15 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTableDatosReporteItemsRemitoRow AddDataTableDatosReporteItemsRemitoRow(int id_prod, string marca, string nombre, double precio_unitario, double subtotal) {
+            public DataTableDatosReporteItemsRemitoRow AddDataTableDatosReporteItemsRemitoRow(int id_prod, string marca, string nombre, double precio_unitario, double subtotal, double cantidad) {
                 DataTableDatosReporteItemsRemitoRow rowDataTableDatosReporteItemsRemitoRow = ((DataTableDatosReporteItemsRemitoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_prod,
                         marca,
                         nombre,
                         precio_unitario,
-                        subtotal};
+                        subtotal,
+                        cantidad};
                 rowDataTableDatosReporteItemsRemitoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableDatosReporteItemsRemitoRow);
                 return rowDataTableDatosReporteItemsRemitoRow;
@@ -434,6 +445,7 @@ namespace Prueba_Rene.Datos {
                 this.columnnombre = base.Columns["nombre"];
                 this.columnprecio_unitario = base.Columns["precio_unitario"];
                 this.columnsubtotal = base.Columns["subtotal"];
+                this.columncantidad = base.Columns["cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,6 +461,8 @@ namespace Prueba_Rene.Datos {
                 base.Columns.Add(this.columnprecio_unitario);
                 this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsubtotal);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -676,6 +690,23 @@ namespace Prueba_Rene.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double cantidad {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableDatosReporteItemsRemito.cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'DataTableDatosReporteItemsRemito\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableDatosReporteItemsRemito.cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_prodNull() {
                 return this.IsNull(this.tableDataTableDatosReporteItemsRemito.id_prodColumn);
             }
@@ -732,6 +763,18 @@ namespace Prueba_Rene.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetsubtotalNull() {
                 this[this.tableDataTableDatosReporteItemsRemito.subtotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableDataTableDatosReporteItemsRemito.cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcantidadNull() {
+                this[this.tableDataTableDatosReporteItemsRemito.cantidadColumn] = global::System.Convert.DBNull;
             }
         }
         

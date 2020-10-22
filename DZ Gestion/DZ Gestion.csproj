@@ -92,6 +92,9 @@
     <Compile Include="Clases\Rubro.cs" />
     <Compile Include="Clases\SStock.cs" />
     <Compile Include="Datos\accesoDatos.cs" />
+    <Compile Include="Datos\DataSetDatosReporteItemsRemito.cs">
+      <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\DataSetDatosReporteItemsRemito.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
