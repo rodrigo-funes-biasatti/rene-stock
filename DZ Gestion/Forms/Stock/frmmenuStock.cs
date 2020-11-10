@@ -41,5 +41,11 @@ namespace Prueba_Rene.Forms.Stock
             frmGraficos frmgraph = new frmGraficos(panel_principal, this);
             cargarFormularioPanel(frmgraph);
         }
+
+        private void panelGenerarInforme_Click(object sender, EventArgs e)
+        {
+            frmGenerarInforme frmInforme = new frmGenerarInforme(panel_principal, this);
+            cargarFormularioPanel(frmInforme);
+        }
     }
 }

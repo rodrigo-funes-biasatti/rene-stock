@@ -30,19 +30,24 @@
         {
             this.panelStockGeneral = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panelEditarStock = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panelGenerarInforme = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelStockGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelEditarStock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelGenerarInforme.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelStockGeneral
@@ -68,6 +73,16 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Consultar Stock";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Prueba_Rene.Properties.Resources.list_alt_regular;
+            this.pictureBox5.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
             // panelEditarStock
             // 
             this.panelEditarStock.BackColor = System.Drawing.Color.Firebrick;
@@ -90,6 +105,16 @@
             this.label3.Size = new System.Drawing.Size(134, 26);
             this.label3.TabIndex = 1;
             this.label3.Text = "Editar Stock";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Prueba_Rene.Properties.Resources.edit_regular;
+            this.pictureBox3.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // panel1
             // 
@@ -124,25 +149,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
+            // panelGenerarInforme
             // 
-            this.pictureBox3.Image = global::Prueba_Rene.Properties.Resources.edit_regular;
-            this.pictureBox3.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.panelGenerarInforme.BackColor = System.Drawing.Color.Firebrick;
+            this.panelGenerarInforme.Controls.Add(this.label4);
+            this.panelGenerarInforme.Controls.Add(this.pictureBox4);
+            this.panelGenerarInforme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelGenerarInforme.Location = new System.Drawing.Point(244, 249);
+            this.panelGenerarInforme.Name = "panelGenerarInforme";
+            this.panelGenerarInforme.Size = new System.Drawing.Size(203, 199);
+            this.panelGenerarInforme.TabIndex = 8;
+            this.panelGenerarInforme.Click += new System.EventHandler(this.panelGenerarInforme_Click);
             // 
-            // pictureBox5
+            // label4
             // 
-            this.pictureBox5.Image = global::Prueba_Rene.Properties.Resources.list_alt_regular;
-            this.pictureBox5.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(103, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 26);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Generar Informe";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Prueba_Rene.Properties.Resources.file_alt_solid1;
+            this.pictureBox4.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(103, 92);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // frmMenuStock
             // 
@@ -150,6 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(691, 694);
+            this.Controls.Add(this.panelGenerarInforme);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelEditarStock);
             this.Controls.Add(this.panelStockGeneral);
@@ -158,13 +197,16 @@
             this.Text = "menuStock";
             this.panelStockGeneral.ResumeLayout(false);
             this.panelStockGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelEditarStock.ResumeLayout(false);
             this.panelEditarStock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelGenerarInforme.ResumeLayout(false);
+            this.panelGenerarInforme.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +222,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelGenerarInforme;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

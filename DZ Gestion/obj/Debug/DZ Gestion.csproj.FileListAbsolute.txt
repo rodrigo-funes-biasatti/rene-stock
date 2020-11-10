@@ -123,3 +123,5 @@ D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debu
 D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.exe
 D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.pdb
 D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\DZ Gestion.csprojAssemblyReference.cache
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmGenerarInforme.resources
+D:\OneDrive\Documentos\Programming\Proyectos .NET\DZ Gestion\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmInformeStock.resources

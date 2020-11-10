@@ -113,6 +113,16 @@ namespace Prueba_Rene.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_alt_solid1 {
+            get {
+                object obj = ResourceManager.GetObject("file-alt-solid1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gear_0_2s_200px {
             get {
                 object obj = ResourceManager.GetObject("Gear-0.2s-200px", resourceCulture);

@@ -936,5 +936,73 @@ namespace Prueba_Rene.Datos
 
             return codigo;
         }
+
+        public DataTable obtenerDatosInformeStock(int id_rubro)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "SELECT r.nombre, SUM(p.precio_unitario*s.cantidad_actual) AS total_valor_existencia, NOW() AS fecha FROM Rubros r JOIN Productos p ON r.id_rubro = p.id_rubro JOIN Stock s ON p.id_prod = s.id_prod WHERE r.id_rubro = @id_rubro";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    try
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id_rubro", id_rubro);
+
+                        da.SelectCommand = cmd;
+
+                        da.Fill(ret);
+
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            return ret;
+        }
+
+        public DataTable obtenerDatosInformeStockItem(int id_rubro)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable ret = new DataTable();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+
+                string query = "SELECT p.id_prod, p.nombre, p.marca, p.precio_unitario, s.cantidad_actual, p.precio_unitario*s.cantidad_actual AS valor_existencia FROM Productos p JOIN Stock s ON p.id_prod = s.id_prod WHERE p.id_rubro = @id_rubro";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    try
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id_rubro", id_rubro);
+
+                        da.SelectCommand = cmd;
+
+                        da.Fill(ret);
+
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            return ret;
+        }
     }
 }

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetInformeStock" targetNamespace="http://tempuri.org/DataSetInformeStock.xsd" xmlns:mstns="http://tempuri.org/DataSetInformeStock.xsd" xmlns="http://tempuri.org/DataSetInformeStock.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetInformeStock" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetInformeStock" msprop:Generator_UserDSName="DataSetInformeStock">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="datosInformeStock" msprop:Generator_TableClassName="datosInformeStockDataTable" msprop:Generator_TableVarName="tabledatosInformeStock" msprop:Generator_RowChangedName="datosInformeStockRowChanged" msprop:Generator_TablePropName="datosInformeStock" msprop:Generator_RowDeletingName="datosInformeStockRowDeleting" msprop:Generator_RowChangingName="datosInformeStockRowChanging" msprop:Generator_RowEvHandlerName="datosInformeStockRowChangeEventHandler" msprop:Generator_RowDeletedName="datosInformeStockRowDeleted" msprop:Generator_RowClassName="datosInformeStockRow" msprop:Generator_UserTableName="datosInformeStock" msprop:Generator_RowEvArgName="datosInformeStockRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rubro" msprop:Generator_ColumnVarNameInTable="columnid_rubro" msprop:Generator_ColumnPropNameInRow="id_rubro" msprop:Generator_ColumnPropNameInTable="id_rubroColumn" msprop:Generator_UserColumnName="id_rubro" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="total_valor_existencia" msprop:Generator_ColumnVarNameInTable="columntotal_valor_existencia" msprop:Generator_ColumnPropNameInRow="total_valor_existencia" msprop:Generator_ColumnPropNameInTable="total_valor_existenciaColumn" msprop:Generator_UserColumnName="total_valor_existencia" type="xs:double" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

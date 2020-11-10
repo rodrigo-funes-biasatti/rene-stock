@@ -260,6 +260,7 @@
                             <TextRun>
                               <Value>=Fields!id_prod.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -294,6 +295,7 @@
                             <TextRun>
                               <Value>=Fields!marca.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -328,6 +330,7 @@
                             <TextRun>
                               <Value>=Fields!nombre.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -362,6 +365,7 @@
                             <TextRun>
                               <Value>=Fields!precio_unitario.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -396,6 +400,7 @@
                             <TextRun>
                               <Value>=Fields!cantidad.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -430,6 +435,7 @@
                             <TextRun>
                               <Value>=Fields!subtotal.Value</Value>
                               <Style>
+                                <FontFamily>Microsoft JhengHei UI</FontFamily>
                                 <Color>Maroon</Color>
                               </Style>
                             </TextRun>
@@ -481,7 +487,7 @@
         <Top>0.28787cm</Top>
         <Left>0.37042cm</Left>
         <Height>1.22646cm</Height>
-        <Width>16.22181cm</Width>
+        <Width>16.22182cm</Width>
         <Style>
           <Border>
             <Color>Maroon</Color>

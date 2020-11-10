@@ -32,5 +32,25 @@ namespace Prueba_Rene.Properties {
                 return ((string)(this["test_reneConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("user id=hs;server=45.80.152.253;database=BD_DZ")]
+        public string BD_DZConnectionString {
+            get {
+                return ((string)(this["BD_DZConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=45.80.152.253;user id=hs;password=cacaca12;database=BD_DZ")]
+        public string BD_DZConnectionString1 {
+            get {
+                return ((string)(this["BD_DZConnectionString1"]));
+            }
+        }
     }
 }

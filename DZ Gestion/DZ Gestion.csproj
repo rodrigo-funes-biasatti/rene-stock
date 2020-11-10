@@ -83,8 +83,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_DZDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_DZDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD_DZDataSetInformeStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_DZDataSetInformeStock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD_DZDataSetInformeStockItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_DZDataSetInformeStockItem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Condicion_Venta.cs" />
     <Compile Include="Clases\DataGraphStock.cs" />
+    <Compile Include="Clases\datosInformeStock.cs" />
+    <Compile Include="Clases\datosInformeStockItem.cs" />
     <Compile Include="Clases\DatosRecaudacion.cs" />
     <Compile Include="Clases\Item_Remito.cs" />
     <Compile Include="Clases\Producto.cs" />
@@ -92,6 +109,14 @@
     <Compile Include="Clases\Rubro.cs" />
     <Compile Include="Clases\SStock.cs" />
     <Compile Include="Datos\accesoDatos.cs" />
+    <Compile Include="Datos\DataSetDatosInformeStockItem.cs">
+      <DependentUpon>DataSetDatosInformeStockItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataSetDatosInformeStockItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDatosInformeStockItem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\DataSetDatosReporteItemsRemito.cs">
       <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
     </Compile>
@@ -107,6 +132,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataSetInformeStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetInformeStock.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Contraseñas\frmABMContraseña.cs">
       <SubType>Form</SubType>
@@ -211,11 +241,23 @@
     <Compile Include="Forms\Stock\frmEditarStock.Designer.cs">
       <DependentUpon>frmEditarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Stock\frmGenerarInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmGenerarInforme.Designer.cs">
+      <DependentUpon>frmGenerarInforme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Stock\frmGraficos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Stock\frmGraficos.Designer.cs">
       <DependentUpon>frmGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock\frmInformeStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmInformeStock.Designer.cs">
+      <DependentUpon>frmInformeStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Stock\frmmenuStock.cs">
       <SubType>Form</SubType>
@@ -224,6 +266,31 @@
       <DependentUpon>frmmenuStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test_reneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_reneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="test_reneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_reneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="test_reneDataSetInformeStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_reneDataSetInformeStock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="test_reneDataSetInformeStock1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_reneDataSetInformeStock1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="test_reneDataSetInformeStockItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_reneDataSetInformeStockItem.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,12 +346,19 @@
     <EmbeddedResource Include="Forms\Stock\frmEditarStock.resx">
       <DependentUpon>frmEditarStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmGenerarInforme.resx">
+      <DependentUpon>frmGenerarInforme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock\frmGraficos.resx">
       <DependentUpon>frmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmInformeStock.resx">
+      <DependentUpon>frmInformeStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock\frmmenuStock.resx">
       <DependentUpon>frmmenuStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\Informes\ReportInformeStock.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -295,6 +369,50 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD_DZDataSet.xsc">
+      <DependentUpon>BD_DZDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_DZDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_DZDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_DZDataSet.xss">
+      <DependentUpon>BD_DZDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_DZDataSetInformeStock.xsc">
+      <DependentUpon>BD_DZDataSetInformeStock.xsd</DependentUpon>
+    </None>
+    <None Include="BD_DZDataSetInformeStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_DZDataSetInformeStock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_DZDataSetInformeStock.xss">
+      <DependentUpon>BD_DZDataSetInformeStock.xsd</DependentUpon>
+    </None>
+    <None Include="BD_DZDataSetInformeStockItem.xsc">
+      <DependentUpon>BD_DZDataSetInformeStockItem.xsd</DependentUpon>
+    </None>
+    <None Include="BD_DZDataSetInformeStockItem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_DZDataSetInformeStockItem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_DZDataSetInformeStockItem.xss">
+      <DependentUpon>BD_DZDataSetInformeStockItem.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetDatosInformeStockItem.xsc">
+      <DependentUpon>DataSetDatosInformeStockItem.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetDatosInformeStockItem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDatosInformeStockItem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetDatosInformeStockItem.xss">
+      <DependentUpon>DataSetDatosInformeStockItem.xsd</DependentUpon>
+    </None>
     <None Include="Datos\DataSetDatosReporteItemsRemito.xsc">
       <DependentUpon>DataSetDatosReporteItemsRemito.xsd</DependentUpon>
     </None>
@@ -317,6 +435,17 @@
     <None Include="Datos\DataSetDatosReporteRemito.xss">
       <DependentUpon>DataSetDatosReporteRemito.xsd</DependentUpon>
     </None>
+    <None Include="Datos\DataSetInformeStock.xsc">
+      <DependentUpon>DataSetInformeStock.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetInformeStock.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetInformeStock.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetInformeStock.xss">
+      <DependentUpon>DataSetInformeStock.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Prueba_Rene.Clases.Item_Remito.datasource" />
     <None Include="Properties\DataSources\Prueba_Rene.Clases.Remito.datasource" />
@@ -329,6 +458,61 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="test_reneDataSet.xsc">
+      <DependentUpon>test_reneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test_reneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test_reneDataSet.xss">
+      <DependentUpon>test_reneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSet1.xsc">
+      <DependentUpon>test_reneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test_reneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test_reneDataSet1.xss">
+      <DependentUpon>test_reneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStock.xsc">
+      <DependentUpon>test_reneDataSetInformeStock.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test_reneDataSetInformeStock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test_reneDataSetInformeStock.xss">
+      <DependentUpon>test_reneDataSetInformeStock.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStock1.xsc">
+      <DependentUpon>test_reneDataSetInformeStock1.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStock1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test_reneDataSetInformeStock1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test_reneDataSetInformeStock1.xss">
+      <DependentUpon>test_reneDataSetInformeStock1.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStockItem.xsc">
+      <DependentUpon>test_reneDataSetInformeStockItem.xsd</DependentUpon>
+    </None>
+    <None Include="test_reneDataSetInformeStockItem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test_reneDataSetInformeStockItem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test_reneDataSetInformeStockItem.xss">
+      <DependentUpon>test_reneDataSetInformeStockItem.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

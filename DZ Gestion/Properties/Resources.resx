@@ -121,6 +121,9 @@
   <data name="plus-square-regular1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus-square-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trash-alt-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash-alt-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cog-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cog-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,14 +136,14 @@
   <data name="chart-bar-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart-bar-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="layer-group-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layer-group-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cog-solid_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cog-solid_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="history-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\history-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hand-holding-usd-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hand-holding-usd-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gear-0.2s-200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gear-0.2s-200px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,13 +157,13 @@
   <data name="list-alt-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list-alt-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trash-alt-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash-alt-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="layer-group-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layer-group-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hand-holding-usd-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hand-holding-usd-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="file-alt-solid1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file-alt-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
