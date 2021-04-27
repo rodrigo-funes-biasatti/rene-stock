@@ -203,7 +203,7 @@
             // 
             this.mtxtPrecioUnitario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtPrecioUnitario.Location = new System.Drawing.Point(186, 298);
-            this.mtxtPrecioUnitario.Mask = "0000,00";
+            this.mtxtPrecioUnitario.Mask = "0000.00";
             this.mtxtPrecioUnitario.Name = "mtxtPrecioUnitario";
             this.mtxtPrecioUnitario.PromptChar = '0';
             this.mtxtPrecioUnitario.Size = new System.Drawing.Size(493, 34);

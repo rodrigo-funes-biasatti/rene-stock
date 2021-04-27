@@ -1,4 +1,5 @@
 ﻿using Prueba_Rene.Clases;
+using Prueba_Rene.Clases.Utils;
 using Prueba_Rene.Datos;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace Prueba_Rene.Forms.Productos
         List<Rubro> rubros;
         Producto prod_seleccionado;
         bool ret_editar;
+        Converts converts;
 
         public frmEditarProducto(Panel principal, frmABMProductos anterior)
         {
@@ -25,6 +27,7 @@ namespace Prueba_Rene.Forms.Productos
             frm_anterior = anterior;
             panel_principal = principal;
             ad = new accesoDatos();
+            converts = new Converts();
         }
 
         private void frmEditarProducto_Load(object sender, EventArgs e)
@@ -106,7 +109,7 @@ namespace Prueba_Rene.Forms.Productos
 
             txtMarca.Text = prod_seleccionado.Marca;
             txtNombre.Text = prod_seleccionado.Nombre;
-            mtxtPrecioUnitario.Text = prod_seleccionado.Precio_unitario.ToString();
+            mtxtPrecioUnitario.Text = converts.convertDoubleToString(prod_seleccionado.Precio_unitario);
             rtxtDescripcion.Text = prod_seleccionado.Descripcion;
             cmbRubros.SelectedValue = prod_seleccionado.Id_rubro;
 

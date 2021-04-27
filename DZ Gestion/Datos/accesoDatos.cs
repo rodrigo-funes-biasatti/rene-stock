@@ -449,6 +449,39 @@ namespace Prueba_Rene.Datos
             }
         }
 
+        public bool actulizarStockPrecio(double precio_nuevo, int id_prod)
+        {
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "UPDATE Productos SET precio_unitario = @precio_unitario WHERE id_prod=@id_prod";
+
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@precio_unitario", precio_nuevo);
+                        cmd.Parameters.AddWithValue("@id_prod", id_prod);
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 1)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+        }
+
         public List<DataGraphStock> obtenerDatosGraph(int id_rubro)
         {
             List<DataGraphStock> dataGraphStocks = new List<DataGraphStock>();
@@ -1003,6 +1036,35 @@ namespace Prueba_Rene.Datos
                 }
             }
             return ret;
+        }
+
+        public double obtenerPrecioUnitarioProd(int id_prod)
+        {
+            double ret;
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                try
+                {
+                    string query = "SELECT p.precio_unitario FROM Productos p WHERE id_prod = @id_prod";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id_prod", id_prod);
+                        ret = Convert.ToDouble(cmd.ExecuteScalar());
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+                return ret;
+            }
         }
     }
 }

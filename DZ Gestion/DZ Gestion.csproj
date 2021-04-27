@@ -108,6 +108,7 @@
     <Compile Include="Clases\Remito.cs" />
     <Compile Include="Clases\Rubro.cs" />
     <Compile Include="Clases\SStock.cs" />
+    <Compile Include="Clases\Utils\Converts.cs" />
     <Compile Include="Datos\accesoDatos.cs" />
     <Compile Include="Datos\DataSetDatosInformeStockItem.cs">
       <DependentUpon>DataSetDatosInformeStockItem.xsd</DependentUpon>

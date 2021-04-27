@@ -44,6 +44,8 @@
             this.backgroundWorkerCargarComboRubros = new System.ComponentModel.BackgroundWorker();
             this.btnEditarStock = new System.Windows.Forms.Button();
             this.backgroundWorkerActualizarStock = new System.ComponentModel.BackgroundWorker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mtbPrecioUnitario = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(252, 283);
+            this.label9.Location = new System.Drawing.Point(259, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(175, 26);
             this.label9.TabIndex = 64;
@@ -117,6 +119,7 @@
             this.cmbRubros.Name = "cmbRubros";
             this.cmbRubros.Size = new System.Drawing.Size(581, 34);
             this.cmbRubros.TabIndex = 56;
+            this.cmbRubros.SelectedIndexChanged += new System.EventHandler(this.cmbRubros_SelectedIndexChanged);
             this.cmbRubros.SelectionChangeCommitted += new System.EventHandler(this.cmbRubros_SelectionChangeCommitted);
             // 
             // label3
@@ -199,12 +202,38 @@
             this.backgroundWorkerActualizarStock.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerActualizarStock_DoWork);
             this.backgroundWorkerActualizarStock.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerActualizarStock_RunWorkerCompleted);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(259, 397);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 26);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "Precio Unitario";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // mtbPrecioUnitario
+            // 
+            this.mtbPrecioUnitario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbPrecioUnitario.Location = new System.Drawing.Point(12, 436);
+            this.mtbPrecioUnitario.Mask = "0000.00";
+            this.mtbPrecioUnitario.Name = "mtbPrecioUnitario";
+            this.mtbPrecioUnitario.PromptChar = '0';
+            this.mtbPrecioUnitario.Size = new System.Drawing.Size(667, 34);
+            this.mtbPrecioUnitario.TabIndex = 68;
+            this.mtbPrecioUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmEditarStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(691, 694);
+            this.Controls.Add(this.mtbPrecioUnitario);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnEditarStock);
             this.Controls.Add(this.txtCantidadActual);
             this.Controls.Add(this.label9);
@@ -245,5 +274,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorkerCargarComboRubros;
         private System.Windows.Forms.Button btnEditarStock;
         private System.ComponentModel.BackgroundWorker backgroundWorkerActualizarStock;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox mtbPrecioUnitario;
     }
 }
