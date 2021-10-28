@@ -1,5 +1,6 @@
 ﻿using Prueba_Rene.Clases;
 using Prueba_Rene.Datos;
+using Prueba_Rene.Forms.Stock;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,6 @@ namespace Prueba_Rene.Forms.Remitos
         Panel panel_principal;
         frmLoading loading;
         DataTable tabla_productos;
-        //Producto prod_seleccionado;
         List<Condicion_Venta> condicion_Ventas;
         double total_remito;
         Remito remito_a_generar;
@@ -28,7 +28,6 @@ namespace Prueba_Rene.Forms.Remitos
             panel_principal = principal;
             frmAnterior = abm;
             ad = new accesoDatos();
-
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -132,10 +131,25 @@ namespace Prueba_Rene.Forms.Remitos
             try
             {
                 cantidad = Convert.ToInt32(txtCantidad.Text);
-                if (cantidad > stock)
+                if (cantidad > stock || stock.Equals(0))
                 {
-                    MessageBox.Show("No hay Stock suficiente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    DialogResult result = MessageBox.Show("No hay Stock suficiente. ¿Desea agregar más?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    switch (result)
+                    {
+                        case DialogResult.Yes:
+                            {
+                                frmAgregarStockRemito frmASR = new frmAgregarStockRemito(Convert.ToInt32(dataGridViewProductos.Rows[dataGridViewProductos.CurrentCell.RowIndex].Cells[0].Value));
+                                frmASR.ShowDialog();
+                                loading = new frmLoading();
+                                loading.Show();
+                                bwAgregarStockRemito.RunWorkerAsync();
+                                return;
+                            }
+                        case DialogResult.No:
+                            {
+                                return;
+                            }
+                    }
                 }
             }
             catch (Exception ex)
@@ -293,6 +307,17 @@ namespace Prueba_Rene.Forms.Remitos
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bwAgregarStockRemito_DoWork(object sender, DoWorkEventArgs e)
+        {
+            tabla_productos = ad.obtenerProductosTablaRemito();
+        }
+
+        private void bwAgregarStockRemito_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            dataGridViewProductos.DataSource = tabla_productos;
+            loading.Close();
         }
     }
 }

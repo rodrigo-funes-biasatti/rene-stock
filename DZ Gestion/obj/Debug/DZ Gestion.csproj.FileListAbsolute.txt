@@ -223,3 +223,102 @@ B:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\aa-ER\DZ Gestion.resources.dl
 B:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.csproj.CopyComplete
 B:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.exe
 B:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.pdb
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.csproj.AssemblyReference.cache
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.ABM.frmABMContraseña.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmAgregarStockRemito.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmGenerarRemito.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmHistorialRemitos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmMenuRemitos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmRecaudacion.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Remitos.frmReporteRemitos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.frmLoading.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.frmMain.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.frmLogin.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmABMProductos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmEditarProducto.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmEliminarProducto.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmListaProductos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Productos.frmNuevoProducto.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Rubros.frmRubros.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmEditarStock.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmGenerarInforme.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmGraficos.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmInformeStock.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmMenuStock.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Properties.Resources.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\Prueba_Rene.Forms.Stock.frmConsultarStock.aa-ER.resources
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.csproj.GenerateResource.cache
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.csproj.CoreCompileInputs.cache
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.exe
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.pdb
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\DZ Gestion.exe.config
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\DZ Gestion.exe
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\DZ Gestion.pdb
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\aa-ER\DZ Gestion.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\EntityFramework.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\MySql.Data.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\EnvDTE.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\stdole.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\Microsoft.MSXML.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\EntityFramework.xml
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\EntityFramework.SqlServer.xml
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\MySql.Data.xml
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\MySql.Data.Entity.EF6.xml
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\aa-ER\DZ Gestion.resources.dll
+D:\Repositorio GIT\rene-stock\DZ Gestion\obj\Debug\DZ Gestion.csproj.CopyComplete

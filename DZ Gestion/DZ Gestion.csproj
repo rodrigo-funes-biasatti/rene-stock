@@ -145,6 +145,12 @@
     <Compile Include="Forms\Contraseñas\frmABMContraseña.Designer.cs">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Remitos\frmAgregarStockRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Remitos\frmAgregarStockRemito.Designer.cs">
+      <DependentUpon>frmAgregarStockRemito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Remitos\frmGenerarRemito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Contraseñas\frmABMContraseña.resx">
       <DependentUpon>frmABMContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Remitos\frmAgregarStockRemito.resx">
+      <DependentUpon>frmAgregarStockRemito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Remitos\frmGenerarRemito.resx">
       <DependentUpon>frmGenerarRemito.cs</DependentUpon>

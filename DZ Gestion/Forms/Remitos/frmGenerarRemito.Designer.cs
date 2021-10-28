@@ -78,6 +78,7 @@
             this.backgroundWorkerGenerarRemito = new System.ComponentModel.BackgroundWorker();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNegocio = new System.Windows.Forms.TextBox();
+            this.bwAgregarStockRemito = new System.ComponentModel.BackgroundWorker();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
@@ -581,6 +582,11 @@
             this.txtNegocio.TabIndex = 82;
             this.txtNegocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // bwAgregarStockRemito
+            // 
+            this.bwAgregarStockRemito.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAgregarStockRemito_DoWork);
+            this.bwAgregarStockRemito.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAgregarStockRemito_RunWorkerCompleted);
+            // 
             // frmGenerarRemito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,5 +685,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorkerGenerarRemito;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNegocio;
+        private System.ComponentModel.BackgroundWorker bwAgregarStockRemito;
     }
 }

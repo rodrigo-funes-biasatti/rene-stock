@@ -10,7 +10,7 @@ namespace Prueba_Rene.Datos
 {
     class accesoDatos
     {
-        string cadena_conexion = "server=45.80.152.253;user id=hs;password=cacaca12;database=BD_DZ";
+        string cadena_conexion = "server=45.80.152.253;user id=hs;password=cacaca12;database=test_rene";
 
         public bool validarContraseña(string contraseña)
         {
@@ -1064,6 +1064,46 @@ namespace Prueba_Rene.Datos
                 }
 
                 return ret;
+            }
+        }
+
+        public Producto obtenerProductoPorId(int id_prod)
+        {
+            Producto producto = new Producto();
+            using (var con = new MySqlConnection(cadena_conexion))
+            {
+                con.Open();
+                try
+                {
+                    string query = "SELECT * FROM Productos WHERE id_prod = @id_prod";
+                    using (var cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id_prod", id_prod);
+
+                        var reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            producto.Id_prod = Convert.ToInt32(reader["id_prod"]);
+                            producto.Marca = reader["marca"].ToString();
+                            producto.Nombre = reader["nombre"].ToString();
+                            producto.Precio_unitario = Convert.ToDouble(reader["precio_unitario"]);
+                            producto.Descripcion = reader["descripcion"].ToString();
+                            producto.Id_rubro = Convert.ToInt32(reader["id_rubro"]);
+                        }
+
+                        return producto;
+                    }
+                }
+                catch(MySqlException e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
     }

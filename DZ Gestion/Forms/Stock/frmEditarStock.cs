@@ -22,7 +22,7 @@ namespace Prueba_Rene.Forms.Stock
         bool result;
         double precio_unitario_prod_selected;
         Converts converts;
-        public frmEditarStock(Panel principal, frmMenuStock menu)
+        public frmEditarStock(Panel principal = null, frmMenuStock menu = null)
         {
             InitializeComponent();
             panel_principal = principal;
@@ -81,10 +81,6 @@ namespace Prueba_Rene.Forms.Stock
 
         private void cmbRubros_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //if (cmbProductos.SelectedItem == null)
-            //{
-            //    return;
-            //}
             loading = new frmLoading();
             loading.Show();
             id_rubro_select = Convert.ToInt32(cmbRubros.SelectedValue);
