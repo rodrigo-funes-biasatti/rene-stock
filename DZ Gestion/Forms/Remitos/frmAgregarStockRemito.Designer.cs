@@ -141,7 +141,7 @@ namespace Prueba_Rene.Forms.Remitos
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarStockRemito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAgregarStockRemito";
+            this.Text = "Agregar Stock desde Remito";
             this.Load += new System.EventHandler(this.frmAgregarStockRemito_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
